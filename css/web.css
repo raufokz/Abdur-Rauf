@@ -53,6 +53,12 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
+
+    /*========== Custom Variables for .home__name ==========*/
+  --home-name-color: #007bff;
+  --home-name-font-style: italic;
+  --home-name-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  --home-name-font-family: 'Georgia', serif;
 }
 
 /* Font size for large devices */
@@ -314,7 +320,12 @@ img {
 .home__title {
   font-size: var(--big-font-size);
 }
-
+.home__name {
+  color: var(--home-name-color); 
+  font-style: var(--home-name-font-style); 
+  text-shadow: var(--home-name-text-shadow); 
+  font-family: var(--home-name-font-family); 
+}
 .home__subtitle {
   font-size: var(--h3-font-size);
   color: var(--text-color);
@@ -519,7 +530,7 @@ img {
 }
 
 .skills__js {
-  width: 60%;
+  width: 70%;
 }
 
 .skills__angular {
