@@ -310,7 +310,7 @@ img {
 }
 
 .home__blob-img {
-  width: 170px;
+  width: 150px;
 }
 
 .home__data {
@@ -1185,7 +1185,7 @@ img {
   .project__container {
     background-color: var(--first-color-second);
     border-radius: 1rem;
-    padding: 3rem 2.5rem 0;
+    padding: 3rem 2.5rem 1rem;
     grid-template-columns: 1fr max-content;
     column-gap: 3rem;
   }
