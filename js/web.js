@@ -230,3 +230,21 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     alert('There was an error sending your message. Please try again later.');
   });
 });
+
+
+// web.js
+(function() {
+  // Load Google Analytics script
+  const gaScript = document.createElement('script');
+  gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-RF2BMMG4GM";
+  gaScript.async = true;
+  document.head.appendChild(gaScript);
+
+  // Initialize Google Analytics
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-RF2BMMG4GM');
+})();
