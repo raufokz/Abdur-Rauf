@@ -230,28 +230,4 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     alert('There was an error sending your message. Please try again later.');
   });
 });
-// web.js
-(function() {
-  // Load Google Analytics script
-  const gaScript = document.createElement('script');
-  gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-RF2BMMG4GM";
-  gaScript.async = true;
-  document.head.appendChild(gaScript);
 
-  // Initialize Google Analytics
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-  gtag('config', 'G-RF2BMMG4GM');
-
-  // Load Google Tag Manager script
-  const gtmScript = document.createElement('script');
-  gtmScript.src = "https://www.googletagmanager.com/gtm.js?id=GTM-K9FZDC66";
-  gtmScript.async = true;
-  document.head.appendChild(gtmScript);
-
-  // Initialize Google Tag Manager
-  window.dataLayer.push({'event': 'gtm.js', 'gtm.start': new Date().getTime()});
-})();
