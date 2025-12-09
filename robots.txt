@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raufokz.github.io/Abdur-Rauf/sitemap.xml
