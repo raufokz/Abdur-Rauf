@@ -1,377 +1,927 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-    <!--==================== Favicon ====================-->
-    <link rel="shortcut icon" href="assets/images/favicon-.ico" type="image/x-icon" />
+  <!-- Primary SEO -->
+  <title>Abdur Rauf — Full Stack Developer | Website, Laravel, React, WordPress & Digital Services</title>
+  <meta name="description" content="Premium Full Stack Developer offering Laravel, PHP, React, WordPress, API integration, SEO, GoHighLevel, product listing, real estate listing, virtual assistant, AI photo design, Netlify, and web hosting services." />
+  <meta name="keywords" content="Full Stack Developer, Website Developer, Laravel Developer, PHP Developer, React Developer, Angular Developer, WordPress Developer, CodeIgniter Developer, API Integration, SEO Services, Virtual Assistant Services, Product Listing Services, Real Estate Listing Services, GoHighLevel Setup, Netlify Deployment, Web Hosting Setup, Logo Design, AI Photo Design, Abdur Rauf" />
+  <meta name="author" content="Abdur Rauf" />
+  <meta name="robots" content="index, follow" />
 
-    <!--==================== Google Tag Manager ====================-->
-    <script>
-      (function(w,d,s,l,i){
-        w[l]=w[l]||[];
-        w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-        var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-        j.async=true;
-        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-        f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-K9FZDC66');
-    </script>
-    <!-- End Google Tag Manager -->
+  <!-- Canonical -->
+  <link rel="canonical" href="https://raufokz.github.io/Abdur-Rauf/" />
 
-    <!--==================== SEO Meta Tags ====================-->
-    <meta name="description" content="Abdur Rauf - Web Developer specializing in frontend and backend development using HTML, CSS, JavaScript, Angular, PHP, Wordpress, Shopify and responsive modern UI/UX design." />
-    <meta name="keywords" content="Abdur Rauf, Web Developer, Frontend Developer, Backend Developer, Portfolio, HTML, CSS, JavaScript, Angular, PHP, Wordpress, Shopify" />
-    <meta name="author" content="Abdur Rauf" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Abdur Rauf — Full Stack Developer | Website, Laravel, React, WordPress & Digital Services" />
+  <meta property="og:description" content="Premium Full Stack Developer offering Laravel, React, WordPress, SEO, GoHighLevel, VA services, product listing, real estate listing, AI photo design, Netlify, and web hosting." />
+  <meta property="og:image" content="https://raufokz.github.io/Abdur-Rauf/assets/images/my-images/profile.webp" />
+  <meta property="og:url" content="https://raufokz.github.io/Abdur-Rauf/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Abdur Rauf Portfolio" />
 
-    <!--==================== Canonical Link ====================-->
-    <link rel="canonical" href="https://raufokz.github.io/Abdur-Rauf/" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Abdur Rauf — Full Stack Developer | Laravel, React & WordPress" />
+  <meta name="twitter:description" content="Premium Full Stack Developer building scalable web apps, SaaS platforms, and business websites." />
+  <meta name="twitter:image" content="https://raufokz.github.io/Abdur-Rauf/assets/images/my-images/profile.webp" />
 
-    <!--==================== Open Graph Meta Tags ====================-->
-    <meta property="og:title" content="Abdur Rauf - Web Developer Portfolio" />
-    <meta property="og:description" content="Portfolio of Web Developer Abdur Rauf showcasing modern frontend & backend projects with HTML, CSS, JavaScript, Angular & PHP expertise." />
-    <meta property="og:image" content="assets/images/profile-banner.png" />
-    <meta property="og:url" content="https://raufokz.github.io/Abdur-Rauf/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Abdur Rauf Portfolio" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
 
-    <!--==================== Twitter Card ====================-->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Abdur Rauf - Web Developer Portfolio" />
-    <meta name="twitter:description" content="Explore the skills, projects and development expertise of Abdur Rauf (Frontend & Backend Developer)." />
-    <meta name="twitter:image" content="assets/images/profile-banner.png" />
-    <meta name="twitter:site" content="@rauforakzai10" />
-    <meta name="twitter:creator" content="@rauforakzai10" />
+  <!-- Font Preloads (performance) -->
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
 
-    <!--==================== UNICONS ====================-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 
-    <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="css/swipper.css" />
+  <!-- Premium CSS -->
+  <link rel="stylesheet" href="css/workspace_clean.css" />
 
-    <!--==================== Main Website CSS ====================-->
-    <link rel="stylesheet" href="css/web.css" />
-
-    <!--==================== Title ====================-->
-    <title>Abdur Rauf - Web Developer Portfolio</title>
-
-    <!--==================== JSON-LD Schema ====================-->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Abdur Rauf",
-      "alternateName": "Abdur Rauf Orakzai",
-      "jobTitle": "Web Developer",
-      "url": "https://raufokz.github.io/Abdur-Rauf/",
-      "image": "https://raufokz.github.io/Abdur-Rauf/",
-      "sameAs": [
-        "https://x.com/rauforakzai10",
-        "https://github.com/raufokz"
-        "https://www.linkedin.com/in/abdur-rauf-a755a8360/"
-      ]
-    }
-    </script>
-
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://raufokz.github.io/Abdur-Rauf/#person",
+        "name": "Abdur Rauf",
+        "url": "https://raufokz.github.io/Abdur-Rauf/",
+        "image": "https://raufokz.github.io/Abdur-Rauf/assets/images/my-images/profile.webp",
+        "jobTitle": "Full Stack Developer",
+        "description": "Self-taught Full Stack Developer specializing in Laravel, PHP, React, Angular, WordPress, and API integrations. Started coding in 2023 and now delivering production web applications for global clients.",
+        "email": "raufabdur886@gmail.com",
+        "telephone": "+923701913453",
+        "address": {"@type":"PostalAddress","addressLocality":"Rawalpindi","addressCountry":"PK"},
+        "knowsAbout": ["Laravel","PHP","React","Angular","WordPress","MySQL","API Integration","JavaScript","TypeScript","SaaS Development","Web Application Development"],
+        "sameAs": ["https://github.com/raufokz","https://www.linkedin.com/in/abdur-rauf-a755a8360/","https://www.instagram.com/abdurrauf500/"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://raufokz.github.io/Abdur-Rauf/#website",
+        "url": "https://raufokz.github.io/Abdur-Rauf/",
+        "name": "Abdur Rauf — Full Stack Developer Portfolio",
+        "author": {"@id":"https://raufokz.github.io/Abdur-Rauf/#person"}
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "Abdur Rauf Web Development",
+        "provider": {"@id":"https://raufokz.github.io/Abdur-Rauf/#person"},
+        "serviceType": ["Web Development","Laravel Development","React Development","WordPress Development","API Integration","SaaS Development"],
+        "areaServed": "Worldwide"
+      }
+    ]
+  }
+  </script>
 </head>
-
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9FZDC66"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
 
-    <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-      <nav class="nav container">
-        <a href="#" class="nav__logo">ABDUR RAUF</a>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list grid">
-            <li class="nav__item">
-              <a href="#home" class="nav__link active-link">
-                <i class="uil uil-estate nav__icon"></i> Home
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#about" class="nav__link">
-                <i class="uil uil-user nav__icon"></i> About
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#skills" class="nav__link">
-                <i class="uil uil-file-alt nav__icon"></i> Skills
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#services" class="nav__link">
-                <i class="uil uil-briefcase-alt nav__icon"></i> Services
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#portfolio" class="nav__link">
-                <i class="uil uil-scenery nav__icon"></i> Portfolio
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">
-                <i class="uil uil-message nav__icon"></i> Contactme
-              </a>
-            </li>
-          </ul>
-          <i class="uil uil-times nav__close" id="nav-close"></i>
+  <!-- Ambient Background -->
+  <div class="ambient-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <nav class="nav" aria-label="Main navigation">
+      <!-- Brand -->
+      <a href="#home" class="nav-brand" aria-label="Abdur Rauf — Home">
+        <div class="nav-logo-mark" aria-hidden="true">AR</div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Abdur Rauf</span>
+          <span class="nav-brand-role">Full Stack Developer</span>
         </div>
+      </a>
 
-        <div class="nav__btns">
-          <!-- Theme change button -->
-          <i class="uil uil-moon change-theme" id="theme-button"></i>
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#home"       class="nav-link active">Home</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#services"   class="nav-link">Services</a></li>
+        <li><a href="#skills"     class="nav-link">Skills</a></li>
+        <li><a href="#projects"   class="nav-link">Projects</a></li>
+        <li><a href="#pricing"    class="nav-link">Pricing</a></li>
+        <li><a href="#reviews"    class="nav-link">Testimonials</a></li>
+        <li><a href="#contact"    class="nav-link">Contact</a></li>
+      </ul>
 
-          <div class="nav__toggle" id="nav-toggle">
-            <i class="uil uil-apps"></i>
-          </div>
-        </div>
-      </nav>
-    </header>
+      <!-- Right Actions -->
+      <div class="nav-actions">
+        <span class="nav-avail" aria-label="Currently available for projects">
+          <span class="avail-dot" aria-hidden="true"></span>
+          Available
+        </span>
+     
+        <a href="#contact" class="nav-cta magnetic" aria-label="Start a project">
+          Start a Project
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
 
-    <!--==================== MAIN ====================-->
-    <main class="main">
-      <!--==================== HOME ====================-->
-      <section class="home section" id="home">
-        <div class="home__container container grid">
-          <div class="home__content grid">
-            <div class="home__social">
-              <a
-                href="https://www.linkedin.com/in/abdur-rauf-a755a8360/"
-                target="_blank"
-                class="home__social-icon"
-              >
-                <i class="uil uil-linkedin-alt"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/abdurrauf500/"
-                target="_blank"
-                class="home__social-icon"
-              >
-                <i class="uil uil-instagram"></i>
-              </a>
-              <a
-                href="https://github.com/raufokz"
-                target="_blank"
-                class="home__social-icon"
-              >
-                <i class="uil uil-github-alt"></i>
-              </a>
-            </div>
+      <!-- Mobile Hamburger -->
+      <button class="nav-hamburger" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+      </button>
+    </nav>
+  </header>
 
-            <div class="home__img">
-              <svg
-                class="home__blob"
-                viewBox="0 0 200 187"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-              >
-                <mask id="mask0" mask-type="alpha">
-                  <path
-                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
-                  />
-                </mask>
-                <g mask="url(#mask0)">
-                  <path
-                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
-                  />
-                  <image
-                    class="home__blob-img"
-                    x="12"
-                    y="10"
-                    xlink:href="assets/images/profile2.png"
-                  />
-                </g>
-              </svg>
-            </div>
+  <!-- Mobile Menu Overlay -->
+  <div class="nav-mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+    <button class="nav-mobile-close" id="mobileClose" aria-label="Close navigation">
+      <i class="uil uil-times"></i>
+    </button>
+    <a href="#home"     class="nav-mobile-link">Home</a>
+    <a href="#about"    class="nav-mobile-link">About</a>
+    <a href="#services" class="nav-mobile-link">Services</a>
+    <a href="#skills"   class="nav-mobile-link">Skills</a>
+    <a href="#projects" class="nav-mobile-link">Projects</a>
+    <a href="#pricing"  class="nav-mobile-link">Pricing</a>
+    <a href="#reviews"  class="nav-mobile-link">Testimonials</a>
+    <a href="#contact"  class="nav-mobile-link">Contact</a>
+    <a href="#contact"  class="nav-mobile-cta">Start a Project ↗</a>
+  </div>
 
-            <div class="home__data">
-              <h1 class="home__title">Hi, I'm  <span class="home__name">Abdur Rauf</span> </h1>
-              <h3 class="home__subtitle">Web developer</h3>
-              <p class="home__description">
-                High level experience in web design and development knowledge,
-                producing quality work.
-              </p>
-              <a href="#contact" class="button button--flex"
-                >Contact Me
-                <i class="uil uil-message button__icon"></i>
-              </a>
-            </div>
-          </div>
-          <div class="home__scroll">
-            <a href="#about" class="home__scroll-button button--flex">
-              <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-              <span class="home__scroll-name">Scroll down</span>
-              <i class="uil uil-arrow-down home__scroll-arrow"></i>
-            </a>
-          </div>
-        </div>
-      </section>
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero section" id="home" aria-label="Hero section">
+      <!-- Floating code background -->
+      <div class="hero-bg-code" aria-hidden="true">
+        <span class="bg-snippet" style="top:12%;left:5%;--dur:22s;--delay:0s;--rot:-4deg">Route::get('/projects', [ProjectController::class, 'index']);</span>
+        <span class="bg-snippet" style="top:25%;left:18%;--dur:28s;--delay:-6s;--rot:3deg">const { data } = useQuery(() => api.get('/projects'));</span>
+        <span class="bg-snippet" style="top:55%;left:3%;--dur:24s;--delay:-3s;--rot:-2deg">SELECT title, stack, year FROM projects ORDER BY year DESC;</span>
+        <span class="bg-snippet" style="top:72%;left:22%;--dur:30s;--delay:-9s;--rot:5deg">@if($project) {{ $project->title }}</span>
+        <span class="bg-snippet" style="top:8%;right:10%;--dur:26s;--delay:-4s;--rot:2deg">import React, { useEffect, useState } from 'react';</span>
+        <span class="bg-snippet" style="top:40%;right:5%;--dur:20s;--delay:-8s;--rot:-3deg">npm run build && npm run deploy</span>
+        <span class="bg-snippet" style="top:65%;right:15%;--dur:32s;--delay:-1s;--rot:4deg">git commit -m "feat: add premium portfolio redesign"</span>
+        <span class="bg-snippet" style="top:82%;right:8%;--dur:25s;--delay:-5s;--rot:-1deg">axios.get('/api/projects').then(({ data }) => setProjects(data));</span>
+        <span class="bg-snippet" style="top:88%;left:40%;--dur:27s;--delay:-7s;--rot:2deg">public function index(): JsonResponse</span>
+        <span class="bg-snippet" style="top:35%;left:55%;--dur:23s;--delay:-2s;--rot:-3deg">display: flex; justify-content: center; align-items: center;</span>
+      </div>
 
-      <!--==================== ABOUT ====================-->
-      <section class="about section" id="about">
-        <h2 class="section__title">About Me</h2>
-        <span class="section__subtitle">My introduction</span>
+      <!-- Mouse spotlight -->
+      <div class="hero-spotlight" id="heroSpotlight" aria-hidden="true"></div>
 
-        <div class="about__container container grid">
-          <img src="assets/images/profile1.jpg" alt="" class="about__img" />
+      <div class="hero-container">
+        <div class="hero-grid">
+          <!-- Left Content -->
+          <div class="hero-content">
+            <span class="hero-eyebrow" role="status">
+              <span class="avail-dot" aria-hidden="true"></span>
+              ⚡ Available for Freelance &amp; Full-Time Roles
+            </span>
 
-          <div class="about__data">
-            <p class="about__description">
-              Web developer, with extensive knowledge and years of experience,
-              working in web technologies and UI / UX design, delivering quality
-              work.
+            <h1 class="hero-title">
+              <span id="typewriter">Full Stack Developer</span><span class="typing-cursor" aria-hidden="true"></span>
+              <br>Building <span class="accent-word">Premium</span>
+              <br>Web Applications
+            </h1>
+
+            <p class="hero-desc">
+              I help startups, agencies, real estate businesses, and international clients build <strong>premium websites, web applications, automation systems, listings, SEO-ready pages</strong>, and digital solutions that look expensive and perform fast — from Laravel &amp; React to GoHighLevel, Virtual Assistant, and AI Photo Design.
             </p>
 
-            <div class="about__info">
-              <div>
-                <span class="about__info-title">02</span>
-                <span class="about__info-name"
-                  >Years <br />
-                  experience</span
-                >
+            <div class="hero-btns">
+              <a href="#projects" class="btn-primary magnetic" aria-label="View featured projects">
+                View Projects
+                <svg width="13" height="13" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="#contact" class="btn-outline magnetic" aria-label="Start a project with me">
+                Start a Project
+              </a>
+            </div>
+
+            <!-- Trust micro-row -->
+            <div class="hero-trust" aria-label="Trust signals">
+              <span class="hero-trust-item"><span class="ht-star" aria-hidden="true">⭐</span> 5.0 Rating</span>
+              <span class="hero-trust-dot" aria-hidden="true"></span>
+              <span class="hero-trust-item">19+ Projects Delivered</span>
+              <span class="hero-trust-dot" aria-hidden="true"></span>
+              <span class="hero-trust-item"><span class="ht-check" aria-hidden="true">✓</span> USA · UK · Canada Clients</span>
+            </div>
+
+            <!-- Social icon row -->
+            <div class="hero-socials">
+              <a href="https://github.com/raufokz" class="hero-social" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                <i class="uil uil-github-alt" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/abdur-rauf-a755a8360/" class="hero-social" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                <i class="uil uil-linkedin-alt" aria-hidden="true"></i>
+              </a>
+              <a href="https://wa.me/923701913453" class="hero-social" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp contact">
+                <i class="uil uil-whatsapp" aria-hidden="true"></i>
+              </a>
+              <a href="assets/doc/pdf/Abdur Rauf (2).pdf" download class="hero-social" aria-label="Download resume">
+                <i class="uil uil-file-download-alt" aria-hidden="true"></i>
+              </a>
+              <span class="hero-social-sep" aria-hidden="true"></span>
+              <span class="hero-social-note">Available for Hire</span>
+            </div>
+
+            <!-- Trust badges -->
+            <div class="hero-badges">
+              <span class="hero-badge">Laravel</span>
+              <span class="hero-badge">React</span>
+              <span class="hero-badge">WordPress</span>
+              <span class="hero-badge">PHP</span>
+              <span class="hero-badge">GoHighLevel</span>
+              <span class="hero-badge">SEO</span>
+              <span class="hero-badge">Real Estate</span>
+              <span class="hero-badge">AI Photo</span>
+            </div>
+
+            <div class="hero-stats" role="list" aria-label="Quick stats">
+              <div class="hero-stat" role="listitem">
+                <span class="hero-stat-num">3<span class="accent">+</span></span>
+                <span class="hero-stat-label">Years Experience</span>
               </div>
-              <div>
-                <span class="about__info-title">10+</span>
-                <span class="about__info-name"
-                  >Completed <br />
-                  project</span
-                >
+              <div class="hero-stat-divider" aria-hidden="true"></div>
+              <div class="hero-stat" role="listitem">
+                <span class="hero-stat-num">19<span class="accent">+</span></span>
+                <span class="hero-stat-label">Projects Delivered</span>
               </div>
-              <div>
-                <span class="about__info-title">02+</span>
-                <span class="about__info-name"
-                  >Companies <br />
-                  worked</span
-                >
+              <div class="hero-stat-divider" aria-hidden="true"></div>
+              <div class="hero-stat" role="listitem">
+                <span class="hero-stat-num">10<span class="accent">+</span></span>
+                <span class="hero-stat-label">APIs Integrated</span>
+              </div>
+              <div class="hero-stat-divider" aria-hidden="true"></div>
+              <div class="hero-stat" role="listitem">
+                <span class="hero-stat-num">5.0<span class="accent">★</span></span>
+                <span class="hero-stat-label">Client Rating</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right — Premium Photo Visual -->
+          <div class="hero-visual">
+            <!-- Floating mini status cards -->
+            <div class="mini-card" style="top:-1rem;right:-1.5rem;animation:floatCard 4s ease-in-out infinite" aria-hidden="true">
+              <span class="mc-dot green"></span> ⭐ 5.0 · 100% Job Success
+            </div>
+            <div class="mini-card" style="bottom:1.5rem;left:-2rem;animation:floatCard 4.5s ease-in-out 1.5s infinite" aria-hidden="true">
+              <span class="mc-dot cyan"></span> ✅ 19+ Projects Delivered
+            </div>
+
+            <!-- Floating small project images -->
+            <div class="hero-fi hero-fi-1" aria-hidden="true">
+              <img src="assets/images/my-images/1.webp" alt="" loading="eager" />
+            </div>
+            <div class="hero-fi hero-fi-2" aria-hidden="true">
+              <img src="assets/images/my-images/2.webp" alt="" loading="eager" />
+            </div>
+            <div class="hero-fi hero-fi-3" aria-hidden="true">
+              <img src="assets/images/my-images/4.webp" alt="" loading="lazy" />
+            </div>
+
+            <!-- Main profile photo card -->
+            <div class="hero-photo-card">
+              <div class="hero-photo-glow" aria-hidden="true"></div>
+              <img class="hero-photo-main" src="assets/images/my-images/profile.webp" alt="Abdur Rauf — Full Stack Developer from Rawalpindi, Pakistan" loading="eager" width="380" height="480" />
+              <div class="hero-photo-badge" aria-hidden="true">
+                <span class="hpb-dot"></span>
+                <span>Open to Work</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero-scroll" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ===== TECH MARQUEE ===== -->
+    <section class="marquee-section" aria-label="Technologies I work with">
+      <p class="marquee-label">Trusted Technologies &amp; Tools</p>
+      <div class="marquee-row">
+        <div class="marquee-track" aria-hidden="true">
+          <div class="tech-pill"><img src="assets/images/tech/laravel.svg" alt=""><span>Laravel</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/php.svg" alt=""><span>PHP</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/react.svg" alt=""><span>React</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/angular.svg" alt=""><span>Angular</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/wordpress.svg" alt=""><span>WordPress</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/javascript.svg" alt=""><span>JavaScript</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/typescript.svg" alt=""><span>TypeScript</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/mysql.svg" alt=""><span>MySQL</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/html.svg" alt=""><span>HTML5</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/css.svg" alt=""><span>CSS3</span></div>
+          <!-- duplicate for infinite scroll -->
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/laravel.svg" alt=""><span>Laravel</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/php.svg" alt=""><span>PHP</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/react.svg" alt=""><span>React</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/angular.svg" alt=""><span>Angular</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/wordpress.svg" alt=""><span>WordPress</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/javascript.svg" alt=""><span>JavaScript</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/typescript.svg" alt=""><span>TypeScript</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/mysql.svg" alt=""><span>MySQL</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/html.svg" alt=""><span>HTML5</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/css.svg" alt=""><span>CSS3</span></div>
+        </div>
+      </div>
+      <div class="marquee-row" style="margin-top:1rem;">
+        <div class="marquee-track rtl" aria-hidden="true">
+          <div class="tech-pill"><img src="assets/images/tech/bootstrap.svg" alt=""><span>Bootstrap</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/tailwind.svg" alt=""><span>Tailwind CSS</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/github.svg" alt=""><span>GitHub</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/firebase.svg" alt=""><span>Firebase</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/rest-api.svg" alt=""><span>REST APIs</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/woocommerce.svg" alt=""><span>WooCommerce</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/elementor.svg" alt=""><span>Elementor</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/perfex.svg" alt=""><span>Perfex CRM</span></div>
+          <div class="tech-pill"><img src="assets/images/tech/gohighlevel.svg" alt=""><span>GoHighLevel</span></div>
+          <!-- duplicate -->
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/bootstrap.svg" alt=""><span>Bootstrap</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/tailwind.svg" alt=""><span>Tailwind CSS</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/github.svg" alt=""><span>GitHub</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/firebase.svg" alt=""><span>Firebase</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/rest-api.svg" alt=""><span>REST APIs</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/woocommerce.svg" alt=""><span>WooCommerce</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/elementor.svg" alt=""><span>Elementor</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/perfex.svg" alt=""><span>Perfex CRM</span></div>
+          <div class="tech-pill" aria-hidden="true"><img src="assets/images/tech/gohighlevel.svg" alt=""><span>GoHighLevel</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Media -->
+          <div class="about-media reveal">
+            <div class="about-img-wrap">
+              <img src="assets/images/my-images/profile.webp" alt="Abdur Rauf — Full Stack Developer from Rawalpindi, Pakistan" loading="lazy" width="480" height="600" />
+            </div>
+            <div class="about-badge about-badge-1 glass" style="animation:floatCard 4s ease-in-out infinite">
+              <span class="ab-val">3<span style="font-size:0.85em">+</span></span>
+              <span class="ab-lbl">Years Experience</span>
+            </div>
+            <div class="about-badge about-badge-2 glass" style="animation:floatCard 4s ease-in-out 1.5s infinite">
+              <span class="ab-val counter" data-counter-target="19">0</span>
+              <span class="ab-lbl">Projects Delivered</span>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="about-content reveal reveal-delay-1">
+            <span class="section-label">About Me</span>
+            <h2 class="section-title" id="about-heading">I Build Products,<br>Not Just Websites</h2>
+            <p class="about-desc">
+              I'm <strong>Abdur Rauf</strong> — a Full Stack Developer who helps startups, agencies, real estate businesses, and global clients turn ideas into high-performing digital products. My journey started in 2023 at Softosol where I taught myself to code from scratch, transitioning from office support to shipping real production applications within months.
+            </p>
+            <p class="about-desc" style="margin-top:-1rem;">
+              I don't just write code — I build systems that solve business problems, drive conversions, and scale with your growth. I've delivered 19+ projects for clients in the USA, UK, and Canada, with a 5.0 rating and 100% on-time delivery. Clear communication, ownership mindset, and results you can measure.
+            </p>
+
+            <div class="about-cards">
+              <div class="about-card tilt">
+                <div class="about-card-icon">⚡</div>
+                <h4>Frontend Engineering</h4>
+                <p>React, Angular, TypeScript — pixel-perfect, fast UI</p>
+              </div>
+              <div class="about-card tilt">
+                <div class="about-card-icon">🛠</div>
+                <h4>Full-Stack Development</h4>
+                <p>Laravel, PHP, MySQL, REST APIs, admin panels</p>
+              </div>
+              <div class="about-card tilt">
+                <div class="about-card-icon">📈</div>
+                <h4>Performance &amp; SEO</h4>
+                <p>98/100 Lighthouse, Core Web Vitals, schema markup</p>
+              </div>
+              <div class="about-card tilt">
+                <div class="about-card-icon">🤝</div>
+                <h4>Business Support</h4>
+                <p>VA services, CRM, listings, GoHighLevel, data entry</p>
               </div>
             </div>
 
-            <div class="about__buttons">
-              <a
-                download=""
-                href="assets/doc/pdf/Abdur Rauf (2).pdf"
-                class="button button--flex"
-                >Download CV<i class="uil uil-download-alt button__icon"></i
-              ></a>
+            <div class="about-tags">
+              <span class="about-tag">Laravel</span>
+              <span class="about-tag">React</span>
+              <span class="about-tag">Angular</span>
+              <span class="about-tag">PHP</span>
+              <span class="about-tag">WordPress</span>
+              <span class="about-tag">MySQL</span>
+              <span class="about-tag">GoHighLevel</span>
+              <span class="about-tag">Virtual Assistant</span>
+              <span class="about-tag">Remote / Worldwide</span>
+            </div>
+
+            <!-- About dual CTAs -->
+            <div class="about-ctas">
+              <a href="assets/doc/pdf/Abdur Rauf (2).pdf" download class="btn-primary magnetic" aria-label="Download resume">
+                <i class="uil uil-file-download-alt" aria-hidden="true"></i> Download Résumé
+              </a>
+              <a href="#contact" class="btn-outline magnetic" aria-label="Book a free call">
+                Book a Free Call ↗
+              </a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!--==================== SKILLS ====================-->
-      <section class="skills section" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <span class="section__subtitle">My technical level</span>
+    <!-- ===== SERVICES ===== -->
+    <section class="services-section section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:3rem;">
+          <span class="section-label">What I Offer</span>
+          <h2 class="section-title" id="services-heading">Full-Spectrum Digital Services</h2>
+          <p class="section-sub" style="margin:0 auto;">From custom web applications to virtual assistant support — end-to-end digital solutions for startups, agencies, real estate businesses, and global clients.</p>
+        </div>
 
-        <div class="skills__container container grid">
-          <div>
-            <!--==================== SKILLS 1 ====================-->
-            <div class="skills__content skills__open">
-              <div class="skills__header">
-                <i class="uil uil-brackets-curly skills__icon"></i>
+        <div class="svc-tabs" role="tablist" aria-label="Service categories">
+          <button class="svc-tab active" data-svc="all" role="tab" aria-selected="true">All Services</button>
+          <button class="svc-tab" data-svc="development" role="tab" aria-selected="false">Development</button>
+          <button class="svc-tab" data-svc="business" role="tab" aria-selected="false">Business Support</button>
+          <button class="svc-tab" data-svc="marketing" role="tab" aria-selected="false">Marketing &amp; Creative</button>
+          <button class="svc-tab" data-svc="tools" role="tab" aria-selected="false">Tools &amp; Deployment</button>
+        </div>
 
-                <div>
-                  <h1 class="skills__title">Frontend developer</h1>
-                  <span class="skills__subtitle">2 years</span>
-                </div>
+        <div class="services-grid reveal" id="servicesGrid">
+          <!-- DEVELOPMENT -->
+          <article class="svc-card tilt" data-svc-cat="development">
+            <div class="svc-card-accent"></div>
+            <div class="svc-icon"><i class="uil uil-globe" aria-hidden="true"></i></div>
+            <span class="svc-cat-label">Development</span>
+            <h3>Website Development</h3>
+            <p>Custom, fast, SEO-friendly websites that convert visitors into clients — built from scratch with clean code.</p>
+          </article>
+          <article class="svc-card tilt" data-svc-cat="development">
+            <div class="svc-card-accent"></div>
+            <div class="svc-icon"><i class="uil uil-laptop-cloud" aria-hidden="true"></i></div>
+            <span class="svc-cat-label">Development</span>
+            <h3>Web Application Development</h3>
+            <p>Full-featured web apps, SaaS dashboards, portals, and systems using modern frontend + backend architecture.</p>
+          </article>
+          <article class="svc-card tilt" data-svc-cat="development">
+            <div class="svc-card-accent"></div>
+            <div class="svc-icon"><i class="uil uil-wordpress-simple" aria-hidden="true"></i></div>
+            <span class="svc-cat-label">Development</span>
+            <h3>WordPress Development</h3>
+            <p>Custom themes, plugins, WooCommerce stores, and Elementor-powered websites built for performance and SEO.</p>
+          </article>
+          <article class="svc-card tilt" data-svc-cat="development">
+            <div class="svc-card-accent"></div>
+            <div class="svc-icon"><i class="uil uil-server" aria-hidden="true"></i></div>
+            <span class="svc-cat-label">Development</span>
+            <h3>Laravel / PHP Development</h3>
+            <p>Robust backend systems, APIs, admin panels, and multi-tenant applications using Laravel, CodeIgniter, and PHP.</p>
+          </article>
+          <article class="svc-card tilt" data-svc-cat="development">
+            <div class="svc-card-accent"></div>
+            <div class="svc-icon"><i class="uil uil-desktop" aria-hidden="true"></i></div>
+            <span class="svc-cat-label">Development</span>
+            <h3>React / Angular UI</h3>
+            <p>Modern, component-driven frontends with pixel-perfect design, smooth animations, and excellent performance.</p>
+          </article>
+          <article class="svc-card tilt" data-svc-cat="development">
+            <div class="svc-card-accent"></div>
+            <div class="svc-icon"><i class="uil uil-plug" aria-hidden="true"></i></div>
+            <span class="svc-cat-label">Development</span>
+            <h3>API Integration</h3>
+            <p>Seamless integration of payment gateways, CRM systems, third-party APIs, and automation workflows.</p>
+          </article>
 
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
+          <!-- BUSINESS SUPPORT -->
+          <article class="svc-card tilt svc-business" data-svc-cat="business">
+            <div class="svc-card-accent svc-accent-b"></div>
+            <div class="svc-icon svc-icon-b"><i class="uil uil-headphones-alt" aria-hidden="true"></i></div>
+            <span class="svc-cat-label svc-label-b">Business Support</span>
+            <h3>Virtual Assistant Services</h3>
+            <p>Email management, calendar scheduling, customer support, lead management, and business admin tasks.</p>
+          </article>
+          <article class="svc-card tilt svc-business" data-svc-cat="business">
+            <div class="svc-card-accent svc-accent-b"></div>
+            <div class="svc-icon svc-icon-b"><i class="uil uil-keyboard-alt" aria-hidden="true"></i></div>
+            <span class="svc-cat-label svc-label-b">Business Support</span>
+            <h3>Data Entry</h3>
+            <p>Accurate, fast data entry, database population, spreadsheet management, and research tasks.</p>
+          </article>
+          <article class="svc-card tilt svc-business" data-svc-cat="business">
+            <div class="svc-card-accent svc-accent-b"></div>
+            <div class="svc-icon svc-icon-b"><i class="uil uil-tag-alt" aria-hidden="true"></i></div>
+            <span class="svc-cat-label svc-label-b">Business Support</span>
+            <h3>Product Listing Management</h3>
+            <p>eCommerce product uploads, category management, SEO-optimized descriptions, and inventory organization.</p>
+          </article>
+          <article class="svc-card tilt svc-business" data-svc-cat="business">
+            <div class="svc-card-accent svc-accent-b"></div>
+            <div class="svc-icon svc-icon-b"><i class="uil uil-home-alt" aria-hidden="true"></i></div>
+            <span class="svc-cat-label svc-label-b">Business Support</span>
+            <h3>Real Estate Listing Management</h3>
+            <p>Property listing uploads, descriptions, image management, and platform management for real estate businesses.</p>
+          </article>
 
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">HTML</h3>
-                    <span class="skills__number">90%</span>
-                  </div>
-                  <div class="skills_bar">
-                    <span class="skills__percentage skills__html"></span>
-                  </div>
-                </div>
+          <!-- MARKETING & CREATIVE -->
+          <article class="svc-card tilt svc-marketing" data-svc-cat="marketing">
+            <div class="svc-card-accent svc-accent-g"></div>
+            <div class="svc-icon svc-icon-g"><i class="uil uil-chart-line" aria-hidden="true"></i></div>
+            <span class="svc-cat-label svc-label-g">Marketing &amp; Creative</span>
+            <h3>SEO Optimization</h3>
+            <p>On-page SEO, keyword research, schema markup, Core Web Vitals, and technical SEO for better rankings.</p>
+          </article>
+          <article class="svc-card tilt svc-marketing" data-svc-cat="marketing">
+            <div class="svc-card-accent svc-accent-g"></div>
+            <div class="svc-icon svc-icon-g"><i class="uil uil-pen" aria-hidden="true"></i></div>
+            <span class="svc-cat-label svc-label-g">Marketing &amp; Creative</span>
+            <h3>Logo Design</h3>
+            <p>Clean, professional logo design that represents your brand identity and works across all digital channels.</p>
+          </article>
+          <article class="svc-card tilt svc-marketing" data-svc-cat="marketing">
+            <div class="svc-card-accent svc-accent-g"></div>
+            <div class="svc-icon svc-icon-g"><i class="uil uil-image-v" aria-hidden="true"></i></div>
+            <span class="svc-cat-label svc-label-g">Marketing &amp; Creative</span>
+            <h3>AI Photo Design</h3>
+            <p>AI-enhanced images, product photos, headshots, and marketing visuals for professional digital presence.</p>
+          </article>
+          <article class="svc-card tilt svc-marketing" data-svc-cat="marketing">
+            <div class="svc-card-accent svc-accent-g"></div>
+            <div class="svc-icon svc-icon-g"><i class="uil uil-layer-group" aria-hidden="true"></i></div>
+            <span class="svc-cat-label svc-label-g">Marketing &amp; Creative</span>
+            <h3>Landing Page Design</h3>
+            <p>High-converting, mobile-optimized landing pages for products, campaigns, and lead generation.</p>
+          </article>
 
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">CSS</h3>
-                    <span class="skills__number">90%</span>
-                  </div>
-                  <div class="skills_bar">
-                    <span class="skills__percentage skills__css"></span>
-                  </div>
-                </div>
+          <!-- TOOLS & DEPLOYMENT -->
+          <article class="svc-card tilt svc-tools" data-svc-cat="tools">
+            <div class="svc-card-accent svc-accent-o"></div>
+            <div class="svc-icon svc-icon-o"><i class="uil uil-bolt-alt" aria-hidden="true"></i></div>
+            <span class="svc-cat-label svc-label-o">Tools &amp; Deployment</span>
+            <h3>GoHighLevel Setup</h3>
+            <p>Full CRM setup, funnel building, automation workflows, and integrations for agencies and businesses.</p>
+          </article>
+          <article class="svc-card tilt svc-tools" data-svc-cat="tools">
+            <div class="svc-card-accent svc-accent-o"></div>
+            <div class="svc-icon svc-icon-o"><i class="uil uil-rocket" aria-hidden="true"></i></div>
+            <span class="svc-cat-label svc-label-o">Tools &amp; Deployment</span>
+            <h3>Netlify Deployment</h3>
+            <p>Fast deployment, continuous integration, custom domains, and environment configuration on Netlify.</p>
+          </article>
+          <article class="svc-card tilt svc-tools" data-svc-cat="tools">
+            <div class="svc-card-accent svc-accent-o"></div>
+            <div class="svc-icon svc-icon-o"><i class="uil uil-cloud-upload" aria-hidden="true"></i></div>
+            <span class="svc-cat-label svc-label-o">Tools &amp; Deployment</span>
+            <h3>Web Hosting Setup</h3>
+            <p>Domain setup, hosting configuration, SSL certificates, DNS management, and server optimization.</p>
+          </article>
+          <article class="svc-card tilt svc-tools" data-svc-cat="tools">
+            <div class="svc-card-accent svc-accent-o"></div>
+            <div class="svc-icon svc-icon-o"><i class="uil uil-shield-check" aria-hidden="true"></i></div>
+            <span class="svc-cat-label svc-label-o">Tools &amp; Deployment</span>
+            <h3>Website Maintenance</h3>
+            <p>Regular updates, security patches, performance monitoring, backups, and ongoing technical support.</p>
+          </article>
+        </div>
 
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">JavaScript</h3>
-                    <span class="skills__number">80%</span>
-                  </div>
-                  <div class="skills_bar">
-                    <span class="skills__percentage skills__js"></span>
-                  </div>
-                </div>
+        <div style="text-align:center;margin-top:3rem;">
+          <a href="#contact" class="btn-primary magnetic">Discuss Your Project ↗</a>
+        </div>
+      </div>
+    </section>
 
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Angular</h3>
-                    <span class="skills__number">80%</span>
-                  </div>
-                  <div class="skills_bar">
-                    <span class="skills__percentage skills__angular"></span>
-                  </div>
-                </div>
-              </div>
+    <!-- ===== SKILLS ===== -->
+    <section class="skills-section section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:3rem;">
+          <span class="section-label">Capability Dashboard</span>
+          <h2 class="section-title" id="skills-heading">Technical &amp; Business Skills</h2>
+          <p class="section-sub" style="margin:0 auto;">From frontend interfaces to backend systems, CMS platforms to business support — a complete skill set built across 3+ years of real-world projects.</p>
+        </div>
+
+        <div class="skills-tabs" role="tablist" aria-label="Skill categories">
+          <button class="skill-tab active" data-tab="frontend" role="tab" aria-selected="true">Frontend</button>
+          <button class="skill-tab" data-tab="backend" role="tab" aria-selected="false">Backend</button>
+          <button class="skill-tab" data-tab="cms" role="tab" aria-selected="false">CMS &amp; Platforms</button>
+          <button class="skill-tab" data-tab="business" role="tab" aria-selected="false">Business Services</button>
+          <button class="skill-tab" data-tab="marketing" role="tab" aria-selected="false">Marketing &amp; Creative</button>
+        </div>
+
+        <div class="skills-panel active" id="panel-frontend" role="tabpanel">
+          <div class="skills-grid">
+            <div class="skill-card tilt reveal"><div class="skill-icon"><img src="assets/images/tech/react.svg" alt="React" width="26" height="26"></div><h4>React</h4><p>Component-driven UIs, hooks, state management</p><div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-1"><div class="skill-icon"><img src="assets/images/tech/angular.svg" alt="Angular" width="26" height="26"></div><h4>Angular</h4><p>TypeScript SPAs, RxJS, Angular Material</p><div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-2"><div class="skill-icon"><img src="assets/images/tech/javascript.svg" alt="JavaScript" width="26" height="26"></div><h4>JavaScript</h4><p>ES6+, async/await, DOM manipulation</p><div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-3"><div class="skill-icon"><img src="assets/images/tech/typescript.svg" alt="TypeScript" width="26" height="26"></div><h4>TypeScript</h4><p>Type-safe code, interfaces, generics</p><div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div></div>
+            <div class="skill-card tilt reveal"><div class="skill-icon"><img src="assets/images/tech/html.svg" alt="HTML" width="26" height="26"></div><h4>HTML5</h4><p>Semantic markup, accessibility, SEO structure</p><div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-1"><div class="skill-icon"><img src="assets/images/tech/css.svg" alt="CSS" width="26" height="26"></div><h4>CSS3 / SCSS</h4><p>Animations, Grid, Flexbox, responsive design</p><div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-2"><div class="skill-icon"><img src="assets/images/tech/tailwind.svg" alt="Tailwind" width="26" height="26"></div><h4>Tailwind CSS</h4><p>Utility-first styling, design systems</p><div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-3"><div class="skill-icon"><img src="assets/images/tech/bootstrap.svg" alt="Bootstrap" width="26" height="26"></div><h4>Bootstrap</h4><p>Rapid UI, responsive grids, components</p><div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skills-panel" id="panel-backend" role="tabpanel">
+          <div class="skills-grid">
+            <div class="skill-card tilt reveal"><div class="skill-icon"><img src="assets/images/tech/laravel.svg" alt="Laravel" width="26" height="26"></div><h4>Laravel</h4><p>MVC, Eloquent, Artisan, Queues, APIs</p><div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-1"><div class="skill-icon"><img src="assets/images/tech/php.svg" alt="PHP" width="26" height="26"></div><h4>PHP</h4><p>OOP, CodeIgniter, custom frameworks</p><div class="skill-bar"><div class="skill-bar-fill" data-width="83"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-2"><div class="skill-icon"><img src="assets/images/tech/mysql.svg" alt="MySQL" width="26" height="26"></div><h4>MySQL</h4><p>Database design, optimization, migrations</p><div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-3"><div class="skill-icon"><img src="assets/images/tech/rest-api.svg" alt="REST API" width="26" height="26"></div><h4>REST APIs</h4><p>API design, authentication, rate limiting</p><div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div></div>
+            <div class="skill-card tilt reveal"><div class="skill-icon"><span style="font-size:1.3rem">🔐</span></div><h4>Authentication</h4><p>JWT, OAuth, Sanctum, session management</p><div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-1"><div class="skill-icon"><span style="font-size:1.3rem">📊</span></div><h4>Admin Panels</h4><p>Custom dashboards, CRUD, role-based access</p><div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skills-panel" id="panel-cms" role="tabpanel">
+          <div class="skills-grid">
+            <div class="skill-card tilt reveal"><div class="skill-icon"><img src="assets/images/tech/wordpress.svg" alt="WordPress" width="26" height="26"></div><h4>WordPress</h4><p>Custom themes, plugins, performance</p><div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-1"><div class="skill-icon"><img src="assets/images/tech/woocommerce.svg" alt="WooCommerce" width="26" height="26"></div><h4>WooCommerce</h4><p>E-commerce, payment gateways, extensions</p><div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-2"><div class="skill-icon"><img src="assets/images/tech/elementor.svg" alt="Elementor" width="26" height="26"></div><h4>Elementor</h4><p>Page builder, custom widgets, animations</p><div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-3"><div class="skill-icon"><span style="font-size:1.3rem">🔌</span></div><h4>Custom Plugins</h4><p>PHP-based WordPress plugin development</p><div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div></div>
+            <div class="skill-card tilt reveal"><div class="skill-icon"><span style="font-size:1.3rem">🚀</span></div><h4>Netlify</h4><p>CI/CD deployment, custom domains, hosting</p><div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-1"><div class="skill-icon"><span style="font-size:1.3rem">☁️</span></div><h4>Web Hosting</h4><p>cPanel, SSL, DNS management, server setup</p><div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skills-panel" id="panel-business" role="tabpanel">
+          <div class="skills-grid">
+            <div class="skill-card tilt reveal"><div class="skill-icon"><span style="font-size:1.3rem">🎧</span></div><h4>Virtual Assistant</h4><p>Email management, scheduling, client support</p><div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-1"><div class="skill-icon"><span style="font-size:1.3rem">🏠</span></div><h4>Real Estate Listing</h4><p>Property uploads, MLS management, descriptions</p><div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-2"><div class="skill-icon"><span style="font-size:1.3rem">📦</span></div><h4>Product Listing</h4><p>eCommerce uploads, Amazon, eBay, WooCommerce</p><div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-3"><div class="skill-icon"><span style="font-size:1.3rem">📋</span></div><h4>Data Entry</h4><p>Spreadsheets, database population, research</p><div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div></div>
+            <div class="skill-card tilt reveal"><div class="skill-icon"><img src="assets/images/tech/perfex.svg" alt="Perfex CRM" width="26" height="26"></div><h4>Perfex CRM</h4><p>Setup, custom modules, automation workflows</p><div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-1"><div class="skill-icon"><img src="assets/images/tech/gohighlevel.svg" alt="GoHighLevel" width="26" height="26"></div><h4>GoHighLevel</h4><p>CRM setup, funnels, automation, integrations</p><div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skills-panel" id="panel-marketing" role="tabpanel">
+          <div class="skills-grid">
+            <div class="skill-card tilt reveal"><div class="skill-icon"><span style="font-size:1.3rem">📈</span></div><h4>SEO Optimization</h4><p>On-page SEO, keywords, schema, Core Web Vitals</p><div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-1"><div class="skill-icon"><span style="font-size:1.3rem">✏️</span></div><h4>Logo Design</h4><p>Brand identity, vector logos, digital assets</p><div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-2"><div class="skill-icon"><span style="font-size:1.3rem">🖼</span></div><h4>AI Photo Design</h4><p>AI-enhanced images, headshots, product visuals</p><div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-3"><div class="skill-icon"><span style="font-size:1.3rem">📄</span></div><h4>Landing Pages</h4><p>High-converting pages for campaigns and lead gen</p><div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div></div>
+            <div class="skill-card tilt reveal"><div class="skill-icon"><span style="font-size:1.3rem">🎯</span></div><h4>Conversion Design</h4><p>CTA optimization, UX, A/B structure</p><div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div></div>
+            <div class="skill-card tilt reveal reveal-delay-1"><div class="skill-icon"><span style="font-size:1.3rem">📱</span></div><h4>Responsive Design</h4><p>Mobile-first, fluid layouts, all screen sizes</p><div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="projects-section section" id="projects" aria-labelledby="projects-heading">
+      <div class="container projects-header">
+        <div>
+          <span class="section-label">Featured Work</span>
+          <h2 class="section-title" id="projects-heading">Premium Projects &amp; Case Studies</h2>
+          <p class="section-sub">A selection of SaaS platforms, web applications, and business websites built with precision and purpose.</p>
+        </div>
+      </div>
+
+      <!-- Featured Project Spotlight -->
+      <div class="container">
+        <div class="feat-slider reveal">
+          <div class="feat-viewport" id="featuredViewport">
+            <div class="feat-track" id="featuredTrack"></div>
+          </div>
+          <div class="feat-controls">
+            <div class="feat-dots" id="featuredDots"></div>
+            <div class="feat-nav">
+              <button class="feat-btn" id="featuredPrev" aria-label="Previous project">
+                <i class="uil uil-angle-left-b"></i>
+              </button>
+              <button class="feat-btn" id="featuredNext" aria-label="Next project">
+                <i class="uil uil-angle-right-b"></i>
+              </button>
             </div>
+          </div>
+          <div class="feat-progress-wrap" style="height:3px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;margin-top:0;">
+            <span id="featuredProgressBar" style="display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));transform-origin:left;animation:featuredProgress 5s linear infinite;border-radius:3px;"></span>
+          </div>
+        </div>
+      </div>
 
-           
+      <!-- Project Filters -->
+      <div class="container" style="margin-top:3rem;">
+        <div class="proj-filters" id="projectFilters" role="group" aria-label="Filter projects by category"></div>
+      </div>
+
+      <!-- Three Infinite Marquee Rows -->
+      <div class="project-marquees" id="projectMarquees" aria-label="Project showcase">
+        <div class="project-marquee-row">
+          <div class="project-marquee-track" id="projRow1"></div>
+        </div>
+        <div class="project-marquee-row">
+          <div class="project-marquee-track rtl" id="projRow2"></div>
+        </div>
+        <div class="project-marquee-row">
+          <div class="project-marquee-track" id="projRow3"></div>
+        </div>
+      </div>
+
+      <!-- Category Marquees (fallback / filterable) -->
+      <div class="category-marquees" id="categoryMarquees" style="display:none;"></div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section class="pricing-section section" id="pricing" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:3rem;">
+          <span class="section-label">Services &amp; Packages</span>
+          <h2 class="section-title" id="pricing-heading">Transparent Pricing Plans</h2>
+          <p class="section-sub" style="margin:0 auto;">Every plan is tailored to deliver maximum value. Need something custom? Let's talk.</p>
+        </div>
+
+        <div class="pricing-toggle" role="group" aria-label="Billing period">
+          <button class="pricing-opt active" data-billing="project">Per Project</button>
+          <button class="pricing-opt" data-billing="monthly">Monthly Retainer</button>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="price-card tilt reveal">
+            <h3>Starter Website</h3>
+            <p class="price-card-desc">For local businesses, personal brands, and landing pages.</p>
+            <div class="price-val">
+              <div class="price-num" data-project-price="$299" data-monthly-price="$199"><span class="accent">$</span>299<span style="font-size:1rem;font-weight:500;color:var(--text-3)">+</span></div>
+              <div class="price-period">per project</div>
+            </div>
+            <ul class="feat-list">
+              <li>3–5 Page Website</li>
+              <li>Responsive Mobile Design</li>
+              <li>Basic SEO Setup</li>
+              <li>Contact Form</li>
+              <li>30 Days Support</li>
+              <li class="no">Custom Functionality</li>
+            </ul>
+            <a href="#contact" class="price-cta magnetic">Get Started</a>
           </div>
 
-          <div class="skills__content skills__close">
-            <div class="skills__header">
-              <i class="uil uil-swatchbook skills__icon"></i>
-
-              <div>
-                <h1 class="skills__title">Backend developer</h1>
-                <span class="skills__subtitle">More than 1 years</span>
-              </div>
-
-              <i class="uil uil-angle-down skills__arrow"></i>
+          <div class="price-card popular tilt reveal reveal-delay-1">
+            <span class="popular-badge">Most Popular</span>
+            <h3>Business Website</h3>
+            <p class="price-card-desc">For companies needing a professional, high-converting presence.</p>
+            <div class="price-val">
+              <div class="price-num" data-project-price="$699" data-monthly-price="$399"><span class="accent">$</span>699<span style="font-size:1rem;font-weight:500;color:var(--text-3)">+</span></div>
+              <div class="price-period">per project</div>
             </div>
+            <ul class="feat-list">
+              <li>8–12 Page Website</li>
+              <li>Custom Premium Design</li>
+              <li>Advanced SEO Optimization</li>
+              <li>CMS Integration</li>
+              <li>Blog / News Setup</li>
+              <li>90 Days Support</li>
+            </ul>
+            <a href="#contact" class="price-cta magnetic">Start This Project</a>
+          </div>
 
-            <div class="skills__list grid">
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name">PHP</h3>
-                  <span class="skills__number">80%</span>
-                </div>
-                <div class="skills_bar">
-                  <span class="skills__percentage skills__php"></span>
-                </div>
+          <div class="price-card tilt reveal reveal-delay-2">
+            <h3>Custom Web App</h3>
+            <p class="price-card-desc">For SaaS platforms, dashboards, portals, and complex systems.</p>
+            <div class="price-val">
+              <div class="price-num" data-project-price="$1499" data-monthly-price="$899"><span class="accent">$</span>1499<span style="font-size:1rem;font-weight:500;color:var(--text-3)">+</span></div>
+              <div class="price-period">per project</div>
+            </div>
+            <ul class="feat-list">
+              <li>Fully Custom Application</li>
+              <li>User Authentication</li>
+              <li>Database Architecture</li>
+              <li>API Integration</li>
+              <li>Admin Dashboard</li>
+              <li>6 Months Support</li>
+            </ul>
+            <a href="#contact" class="price-cta magnetic">Book a Free Call</a>
+          </div>
+
+          <div class="price-card tilt reveal reveal-delay-3">
+            <h3>Digital Support Package</h3>
+            <p class="price-card-desc">Best for VA work, product listings, real estate listings, SEO support, and data entry.</p>
+            <div class="price-val">
+              <div class="price-num" data-project-price="$10" data-monthly-price="$8"><span class="accent">$</span>10<span style="font-size:1rem;font-weight:500;color:var(--text-3)">/hr</span></div>
+              <div class="price-period">starting rate</div>
+            </div>
+            <ul class="feat-list">
+              <li>Email Management</li>
+              <li>Calendar Scheduling</li>
+              <li>Customer Support</li>
+              <li>Data Entry &amp; Research</li>
+              <li>Lead Management (CRM)</li>
+              <li>Flexible Hours</li>
+            </ul>
+            <a href="#contact" class="price-cta magnetic">Hire Me Now</a>
+          </div>
+        </div>
+
+        <div class="pricing-footer">
+          <span>Need something custom? <a href="#contact" style="color:var(--accent);font-weight:600;">Contact me for a tailored quote →</a></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TIMELINE / JOURNEY ===== -->
+    <section class="timeline-section section" id="experience" aria-labelledby="timeline-heading">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:4rem;">
+          <span class="section-label">Career Journey</span>
+          <h2 class="section-title" id="timeline-heading">My Professional Path</h2>
+        </div>
+
+        <div class="timeline" id="journeyMap">
+          <div class="road-rocket" id="journeyRocket" aria-hidden="true">
+            <i class="uil uil-rocket"></i>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <img class="tl-img" src="assets/images/my-images/1.webp" alt="Abdur Rauf at Softosol 2023" loading="lazy">
+              <span class="tl-date">Jul – Dec 2023</span>
+              <h3>Office Boy at Softosol</h3>
+              <p>Joined <strong>Softosol, Islamabad</strong> as an office boy. By day I managed the office; by night I taught myself programming — HTML, CSS, JavaScript, Angular, PHP, and SQL — driven by nothing but determination to break into tech.</p>
+              <div class="tl-tags">
+                <span class="tl-tag">HTML &amp; CSS</span>
+                <span class="tl-tag">JavaScript</span>
+                <span class="tl-tag">Angular</span>
+                <span class="tl-tag">PHP</span>
+                <span class="tl-tag">SQL</span>
+                <span class="tl-tag">Self-Taught</span>
               </div>
+            </div>
+          </div>
 
-         
-              <div class="skills__data">
-                <div class="skills__titles">
-                  <h3 class="skills__name">SQL</h3>
-                  <span class="skills__number">70%</span>
-                </div>
-                <div class="skills_bar">
-                  <span class="skills__percentage skills__sql"></span>
-                </div>
+          <div class="tl-item reveal reveal-delay-1">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <img class="tl-img" src="assets/images/my-images/2.webp" alt="Abdur Rauf as Web Developer 2024" loading="lazy">
+              <span class="tl-date">2024</span>
+              <h3>Web Developer at Softosol</h3>
+              <p>The late nights paid off. Promoted to <strong>Web Developer at Softosol, Islamabad</strong> — developing and maintaining real web applications using HTML5, CSS3, JavaScript, Angular, SQL, and PHP. Shipped SoftoTeam and iProply.</p>
+              <div class="tl-tags">
+                <span class="tl-tag">Angular</span>
+                <span class="tl-tag">PHP</span>
+                <span class="tl-tag">MySQL</span>
+                <span class="tl-tag">JavaScript</span>
+                <span class="tl-tag">Softosol</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item reveal reveal-delay-2">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <img class="tl-img" src="assets/images/my-images/3.webp" alt="Abdur Rauf Freelance 2024-2025" loading="lazy">
+              <span class="tl-date">2024 – 2025</span>
+              <h3>Freelancer — Full Stack &amp; Virtual Assistant</h3>
+              <p>Expanded into Laravel, React, WordPress, and Virtual Assistant services. Started working with international clients — managing CRM systems, GoHighLevel funnels, Perfex CRM, email campaigns, calendar scheduling, and building premium websites for USA, UK, and Canada-based businesses.</p>
+              <div class="tl-tags">
+                <span class="tl-tag">Laravel</span>
+                <span class="tl-tag">React</span>
+                <span class="tl-tag">WordPress</span>
+                <span class="tl-tag">GoHighLevel</span>
+                <span class="tl-tag">Perfex CRM</span>
+                <span class="tl-tag">Virtual Assistant</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item reveal reveal-delay-3">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <img class="tl-img" src="assets/images/my-images/4.webp" alt="Abdur Rauf 2025-2026" loading="lazy">
+              <span class="tl-date">2025 – 2026</span>
+              <h3>Growing Full Stack Developer &amp; VA — ISA</h3>
+              <p>Delivering SaaS platforms, CRM integrations, API-driven applications, and VA support for global clients. Expanding expertise in React, TypeScript, and cloud deployments — ISA aiming for senior full-stack and remote team lead roles.</p>
+              <div class="tl-tags">
+                <span class="tl-tag">Laravel</span>
+                <span class="tl-tag">React</span>
+                <span class="tl-tag">TypeScript</span>
+                <span class="tl-tag">API Integration</span>
+                <span class="tl-tag">SaaS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card tl-card-now">
+              <img class="tl-img" src="assets/images/my-images/profile.webp" alt="Abdur Rauf 2026 Present" loading="lazy">
+              <span class="tl-date tl-date-now">2026 — Now</span>
+              <h3>Available for Hire <span style="color:var(--accent-green)">●</span></h3>
+              <p>Currently open to freelance projects, full-time remote roles, and long-term collaborations. Skilled in Laravel, React, Angular, WordPress, CRM, and Virtual Assistant services. Let's build something great together — ISA.</p>
+              <div class="tl-tags">
+                <span class="tl-tag" style="color:var(--accent-green);background:rgba(57,255,136,0.07);border-color:rgba(57,255,136,0.2)">Open to Work</span>
+                <span class="tl-tag" style="color:var(--accent-green);background:rgba(57,255,136,0.07);border-color:rgba(57,255,136,0.2)">Remote Ready</span>
+                <span class="tl-tag" style="color:var(--accent-green);background:rgba(57,255,136,0.07);border-color:rgba(57,255,136,0.2)">Full-Time / Freelance</span>
               </div>
             </div>
           </div>
@@ -379,423 +929,314 @@
       </div>
     </section>
 
- 
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="reviews-section section" id="reviews" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="reviews-header">
+          <span class="section-label">Client Success Stories</span>
+          <h2 class="section-title" id="reviews-heading">What Clients Say</h2>
+        </div>
 
-      <!--==================== SERVICES ====================-->
-      <section class="services section" id="services">
-        <h2 class="section__title">Services</h2>
-        <span class="section__subtitle">What i offer</span>
-
-        <div class="services__container container grid">
-          <!--==================== SERVICES 1 ====================-->
-          <div class="services__content">
-            <div>
-              <i class="uil uil-window-grid services__icon"></i>
-              <h3 class="services__title">
-                Ui/Ux <br />
-                Designer
-              </h3>
-            </div>
-
-            <span
-              class="
-                button button--flex button--small button--link
-                services__button
-              "
-            >
-              View More
-              <i class="uil uil-arrow-right button__icon"></i>
-            </span>
-
-            <div class="services__modal">
-              <div class="services__modal-content">
-                <h4 class="services__modal-title">
-                  Ui/Ux <br />
-                  Designer
-                </h4>
-                <i class="uil uil-times services__modal-close"></i>
-
-                <ul class="services__modal-services grid">
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>I develop the user interface.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Web page developement.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>I create ux element interactions.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>I position your company brand.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
+        <div class="rating-bar" role="list" aria-label="Review statistics">
+          <div class="rating-item" role="listitem">
+            <span class="rating-num">5.0 ★</span>
+            <div class="rating-lbl">Average Rating</div>
           </div>
-
-          <!--==================== SERVICES 2 ====================-->
-          <div class="services__content">
-            <div>
-              <i class="uil uil-arrow services__icon"></i>
-              <h3 class="services__title">
-                Frontend <br />
-                Developer
-              </h3>
-            </div>
-
-            <span
-              class="
-                button button--flex button--small button--link
-                services__button
-              "
-            >
-              View More
-              <i class="uil uil-arrow-right button__icon"></i>
-            </span>
-
-            <div class="services__modal">
-              <div class="services__modal-content">
-                <h4 class="services__modal-title">
-                  Frontend <br />
-                  Developer
-                </h4>
-                <i class="uil uil-times services__modal-close"></i>
-
-                <ul class="services__modal-services grid">
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>I develop the user interface.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>WEb page developement.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>I create ux element interactions.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>I position your company brand.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div class="rating-item" role="listitem">
+            <span class="rating-num counter" data-counter-target="19">0</span>
+            <div class="rating-lbl">Projects Delivered</div>
           </div>
-
-          <!--==================== SERVICES 3 ====================-->
-          <div class="services__content">
-            <div>
-              <i class="uil uil-database services__icon"></i>
-              <h3 class="services__title">
-                Backend <br />
-                Developer
-              </h3>
-            </div>
-
-            <span
-              class="
-                button button--flex button--small button--link
-                services__button
-              "
-            >
-              View More
-              <i class="uil uil-arrow-right button__icon"></i>
-            </span>
-
-            <div class="services__modal">
-              <div class="services__modal-content">
-                <h4 class="services__modal-title">
-                  Backend <br />
-                  Developer
-                </h4>
-                <i class="uil uil-times services__modal-close"></i>
-
-                <ul class="services__modal-services grid">
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>I develop the server side.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>I create database schema.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>I develop Restful APIs.</p>
-                  </li>
-
-                  <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>I ensure data security.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div class="rating-item" role="listitem">
+            <span class="rating-num">98%</span>
+            <div class="rating-lbl">Client Satisfaction</div>
+          </div>
+          <div class="rating-item" role="listitem">
+            <span class="rating-num">100%</span>
+            <div class="rating-lbl">On-Time Delivery</div>
           </div>
         </div>
-      </section>
-      <section class="portfolio section" id="portfolio">
-        <h2 class="section__title">Portfolio</h2>
-        <span class="section__subtitle">Most recent work</span>
 
-        <div class="portfolio__container container swiper swiper-container">
-          <div class="swiper-wrapper">
-            <!--==================== PORTFOLIO 1 ====================-->
-            <div class="portfolio__content grid swiper-slide">
-                <img src="assets/images/favicon.ico" alt="Brand Design" class="portfolio__img" />
-                <div class="portfolio__data">
-                    <h3 class="portfolio__title">Company Hub</h3>
-                    <p class="portfolio__description">
-                        A comprehensive platform for managing company tasks, including check-in/check-out, ticket management, and internal communication.
-                    </p>
-                <a
-                  href="https://github.com/SoftoSol/SoftoTeam-web" target="_blank"
-                  class="button button--flex button--small portfolio__button"
-                  >Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
-              </div>
-            </div>
-
-            <!--==================== PORTFOLIO 2 ====================-->
-            <div class="portfolio__content grid swiper-slide">
-                <img src="assets/images/header icon.svg" alt="Account Website" class="portfolio__img" />
-                <div class="portfolio__data">
-                    <h3 class="portfolio__title">Account Website</h3>
-                    <p class="portfolio__description">
-                        A responsive website for managing accounts, with an intuitive UI and secure features.
-                    </p>
-                <a
-                  href="https://github.com/SoftoSol/accounts-fe" target="_blank"
-                  class="button button--flex button--small portfolio__button"
-                  >Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
-              </div>
-            </div>
-
-            <!--==================== PORTFOLIO 3 ====================-->
-            <div class="portfolio__content grid swiper-slide">
-                <img src="assets/images/logo.png" alt="Softo Family" class="portfolio__img" />
-                <div class="portfolio__data">
-                    <h3 class="portfolio__title">Softo Family</h3>
-                    <p class="portfolio__description">
-                        Softo Family is a privacy-focused GPS locator and family management application. It ensures the safety and connectivity of families globally through advanced features like private circles, real-time location sharing, and comprehensive family management tools.
-                    </p>
-                <a
-                  href="https://github.com/SoftoSol/softofamily-web"  target="_blank"
-                  class="button button--flex button--small portfolio__button"
-                  >Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
-              </div>
-            </div>
-
-            <!--==================== PORTFOLIO 4 ====================-->
-            <div class="portfolio__content grid swiper-slide">
-                <img src="assets/images/perfex_crm.png" alt="Perfex CRM" class="portfolio__img" />
-                <div class="portfolio__data">
-                    <h3 class="portfolio__title">Perfex CRM</h3>
-                    <p class="portfolio__description">
-                        Perfex CRM is a free, open-source customer relationship management (CRM) platform. It is a full-featured CRM that can be used to automate sales, marketing, and customer support processes.
-                    </p>
-                <a
-                  href="https://github.com/arham-anees/perfex_crm"  target="_blank"
-                  class="button button--flex button--small portfolio__button"
-                  >Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="swiper-button-next">
-            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-          </div>
-          <div class="swiper-button-prev">
-            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-          </div>
-
-          <div class="swiper-pagination"></div>
+        <div class="review-outer" id="reviewCarousel" aria-label="Client testimonials">
+          <div class="review-track" id="reviewTrack"></div>
         </div>
-      </section>
+        <div class="review-dots" id="reviewDots" role="group" aria-label="Testimonial navigation"></div>
+      </div>
+    </section>
 
+    <!-- ===== STATS / ACHIEVEMENTS ===== -->
+    <section class="stats-section section" id="achievements" aria-labelledby="stats-heading">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:3rem;">
+          <span class="section-label">By the Numbers</span>
+          <h2 class="section-title" id="stats-heading">Proven Track Record</h2>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card reveal tilt">
+            <div class="stat-icon"><i class="uil uil-check-circle"></i></div>
+            <span class="stat-number"><span class="counter" data-counter-target="19">0</span><span class="accent">+</span></span>
+            <div class="stat-desc">Projects Completed</div>
+            <div class="stat-progress"><div class="stat-progress-fill" style="--prog:95%"></div></div>
+          </div>
+          <div class="stat-card reveal reveal-delay-1 tilt">
+            <div class="stat-icon"><i class="uil uil-clock"></i></div>
+            <span class="stat-number"><span class="counter" data-counter-target="3">0</span><span class="accent">+</span></span>
+            <div class="stat-desc">Years Experience</div>
+            <div class="stat-progress"><div class="stat-progress-fill" style="--prog:60%"></div></div>
+          </div>
+          <div class="stat-card reveal reveal-delay-2 tilt">
+            <div class="stat-icon"><i class="uil uil-star"></i></div>
+            <span class="stat-number">5.0<span class="accent">★</span></span>
+            <div class="stat-desc">Client Rating</div>
+            <div class="stat-progress"><div class="stat-progress-fill" style="--prog:100%"></div></div>
+          </div>
+          <div class="stat-card reveal reveal-delay-3 tilt">
+            <div class="stat-icon"><i class="uil uil-link"></i></div>
+            <span class="stat-number"><span class="counter" data-counter-target="10">0</span><span class="accent">+</span></span>
+            <div class="stat-desc">APIs Integrated</div>
+            <div class="stat-progress"><div class="stat-progress-fill" style="--prog:80%"></div></div>
+          </div>
+          <div class="stat-card reveal tilt">
+            <div class="stat-icon"><i class="uil uil-chart-growth"></i></div>
+            <span class="stat-number"><span class="counter" data-counter-target="10000">0</span><span class="accent">+</span></span>
+            <div class="stat-desc">Leads Managed (CRM)</div>
+            <div class="stat-progress"><div class="stat-progress-fill" style="--prog:88%"></div></div>
+          </div>
+          <div class="stat-card reveal reveal-delay-1 tilt">
+            <div class="stat-icon"><i class="uil uil-rocket"></i></div>
+            <span class="stat-number">98<span class="accent">/100</span></span>
+            <div class="stat-desc">Lighthouse Score</div>
+            <div class="stat-progress"><div class="stat-progress-fill" style="--prog:98%"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <!--==================== PROJECT IN MIND ====================-->
-      <section class="project section">
-        <div class="project__bg">
-          <div class="project__container container grid">
-            <div class="project__data">
-              <h2 class="project__title">You have a new project</h2>
-              <p class="project__description">
-                Contact me now and get a 30% discount on your new project.
-              </p>
-              <a href="#contact" class="button button--flex button--white"
-                >Contact Me
-                <i class="uil uil-message project__icon button__icon"></i>
+    <!-- ===== CONTACT ===== -->
+    <section class="contact-section section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Info Side -->
+          <div class="contact-info reveal">
+            <span class="section-label">Get in Touch</span>
+            <h2 class="contact-info-title" id="contact-heading">Let's Build Something<br><span style="background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Premium Together</span></h2>
+            <p class="contact-info-desc">Have a project in mind? I'm available for freelance work, full-time roles, and consulting. I usually respond within 24 hours.</p>
+
+            <div class="contact-links">
+              <a href="mailto:raufabdur886@gmail.com" class="contact-link" aria-label="Send email to Abdur Rauf">
+                <div class="cl-icon"><i class="uil uil-envelope-alt" aria-hidden="true"></i></div>
+                <div class="cl-text"><strong>Email</strong><span>raufabdur886@gmail.com</span></div>
+              </a>
+              <a href="https://wa.me/923701913453" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Chat on WhatsApp">
+                <div class="cl-icon"><i class="uil uil-whatsapp" aria-hidden="true"></i></div>
+                <div class="cl-text"><strong>WhatsApp</strong><span>+92 370 1913453</span></div>
+              </a>
+              <a href="https://www.linkedin.com/in/abdur-rauf-a755a8360/" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Connect on LinkedIn">
+                <div class="cl-icon"><i class="uil uil-linkedin-alt" aria-hidden="true"></i></div>
+                <div class="cl-text"><strong>LinkedIn</strong><span>linkedin.com/in/abdur-rauf</span></div>
+              </a>
+              <a href="https://github.com/raufokz" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="View GitHub profile">
+                <div class="cl-icon"><i class="uil uil-github-alt" aria-hidden="true"></i></div>
+                <div class="cl-text"><strong>GitHub</strong><span>github.com/raufokz</span></div>
               </a>
             </div>
 
-            <img src="assets/images/project.jpeg" alt="" class="project__img" />
+            <div class="contact-avail">
+              <span class="avail-dot" aria-hidden="true"></span>
+              Currently available for new projects
+            </div>
+
+            <!-- Quick-win CTAs -->
+            <div class="contact-quick-ctas">
+              <a href="https://wa.me/923701913453?text=Hi%20Abdur%2C%20I'd%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener noreferrer" class="quick-cta quick-cta-wa" aria-label="Message on WhatsApp">
+                <i class="uil uil-whatsapp" aria-hidden="true"></i>
+                Message on WhatsApp
+              </a>
+              <a href="mailto:raufabdur886@gmail.com?subject=Free%20Project%20Consultation" class="quick-cta quick-cta-call" aria-label="Request a free call">
+                <i class="uil uil-phone" aria-hidden="true"></i>
+                Book a Free Call
+              </a>
+            </div>
+          </div>
+
+          <!-- Form Side -->
+          <div class="reveal reveal-delay-2">
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xwpeezya" method="POST" novalidate aria-label="Project inquiry form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="name">Full Name *</label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="John Smith" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="john@company.com" required autocomplete="email" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="company">Company / Website</label>
+                  <input type="text" id="company" name="company" class="form-input" placeholder="Acme Inc." autocomplete="organization" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="project-type">Project Type *</label>
+                  <select id="project-type" name="project_type" class="form-select form-input" required>
+                    <option value="" disabled selected>Select a service...</option>
+                    <optgroup label="Development">
+                      <option value="Website Development">Website Development</option>
+                      <option value="Web Application">Web Application</option>
+                      <option value="WordPress Website">WordPress Website</option>
+                      <option value="Laravel Project">Laravel / PHP Project</option>
+                      <option value="React Angular UI">React / Angular UI</option>
+                      <option value="API Integration">API Integration</option>
+                    </optgroup>
+                    <optgroup label="Business Support">
+                      <option value="Virtual Assistant">Virtual Assistant</option>
+                      <option value="Real Estate Listing">Real Estate Listing</option>
+                      <option value="Product Listing">Product Listing</option>
+                      <option value="Data Entry">Data Entry</option>
+                    </optgroup>
+                    <optgroup label="Marketing & Creative">
+                      <option value="SEO">SEO Optimization</option>
+                      <option value="Logo Design">Logo Design</option>
+                      <option value="AI Photo Design">AI Photo Design</option>
+                      <option value="Landing Page">Landing Page</option>
+                    </optgroup>
+                    <optgroup label="Tools & Deployment">
+                      <option value="GoHighLevel Setup">GoHighLevel Setup</option>
+                      <option value="Web Hosting">Web Hosting Setup</option>
+                      <option value="Netlify Deployment">Netlify Deployment</option>
+                      <option value="Maintenance">Website Maintenance</option>
+                    </optgroup>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="budget">Budget Range</label>
+                <select id="budget" name="budget" class="form-select form-input">
+                  <option value="" disabled selected>Select budget...</option>
+                  <option value="Under $500">Under $500</option>
+                  <option value="$500 - $1000">$500 – $1,000</option>
+                  <option value="$1000 - $3000">$1,000 – $3,000</option>
+                  <option value="$3000 - $5000">$3,000 – $5,000</option>
+                  <option value="$5000+">$5,000+</option>
+                  <option value="Let's discuss">Let's discuss</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Project Details *</label>
+                <textarea id="message" name="message" class="form-textarea form-input" rows="5" placeholder="Tell me about your project, goals, and timeline..." required></textarea>
+              </div>
+
+              <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+
+              <button type="submit" class="form-submit magnetic" id="submitBtn" aria-label="Send project request">
+                <i class="uil uil-telegram-alt" aria-hidden="true"></i>
+                Send Project Request
+              </button>
+              <p class="form-note">I usually respond within 24 hours. No commitment required. <span style="opacity:0.6">🔒 No spam — your details stay private.</span></p>
+            </form>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+  </main>
 
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="f-logo">AR.</span>
+          <p>Building premium websites, web applications, listings, SEO-ready pages, digital designs, and business solutions with Laravel, React, WordPress, PHP, GoHighLevel, Netlify, and modern UI systems.</p>
+          <div class="footer-socials">
+            <a href="https://github.com/raufokz" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="GitHub Profile">
+              <i class="uil uil-github-alt" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/abdur-rauf-a755a8360/" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn Profile">
+              <i class="uil uil-linkedin-alt" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/abdurrauf500/" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Instagram Profile">
+              <i class="uil uil-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://wa.me/923701913453" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="WhatsApp Contact">
+              <i class="uil uil-whatsapp" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="footer-avail">
+            <span class="avail-dot" aria-hidden="true"></span> Available for Hire — Worldwide
+          </div>
 
-      <!--==================== CONTACT ME ====================-->
-      <section class="contact section" id="contact">
-  <h2 class="section__title">Contact Me</h2>
-  <span class="section__subtitle">Get in touch</span>
+          <!-- Footer newsletter -->
+          <div class="footer-newsletter">
+            <p class="fn-label">Get a free project quote</p>
+            <form class="fn-form" action="https://formspree.io/f/xwpeezya" method="POST" novalidate aria-label="Quick quote form">
+              <input type="email" name="email" class="fn-input" placeholder="Your email address" required aria-label="Email for free quote" />
+              <button type="submit" class="fn-btn">Get Quote</button>
+            </form>
+          </div>
+        </div>
 
-  <div class="contact__container container grid">
-    <div>
-      <div class="contact__information">
-        <i class="uil uil-phone-alt contact__icon"></i>
-        <div>
-          <h3 class="contact__title">Call Me</h3>
-          <span class="contact__subtitle">+92 370 19 13 453</span>
+        <div class="f-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="f-col">
+          <h4>Development</h4>
+          <ul>
+            <li><a href="#services">Website Development</a></li>
+            <li><a href="#services">Laravel &amp; PHP</a></li>
+            <li><a href="#services">React &amp; Angular</a></li>
+            <li><a href="#services">WordPress &amp; WooCommerce</a></li>
+            <li><a href="#services">API Integration</a></li>
+            <li><a href="#services">Web Applications</a></li>
+          </ul>
+        </div>
+
+        <div class="f-col">
+          <h4>Business &amp; Creative</h4>
+          <ul>
+            <li><a href="#services">Virtual Assistant</a></li>
+            <li><a href="#services">Real Estate Listing</a></li>
+            <li><a href="#services">Product Listing</a></li>
+            <li><a href="#services">SEO Optimization</a></li>
+            <li><a href="#services">Logo &amp; AI Photo Design</a></li>
+            <li><a href="#services">GoHighLevel Setup</a></li>
+          </ul>
+        </div>
+
+        <div class="f-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:raufabdur886@gmail.com">raufabdur886@gmail.com</a></li>
+            <li><a href="https://wa.me/923701913453" target="_blank" rel="noopener noreferrer">+92 370 1913453</a></li>
+            <li><a href="#contact">Start a Project</a></li>
+            <li><a href="assets/doc/pdf/Abdur Rauf (2).pdf" download>Download Resume</a></li>
+          </ul>
         </div>
       </div>
-      <div class="contact__information">
-        <i class="uil uil-envelope contact__icon"></i>
-        <div>
-          <h3 class="contact__title">Email</h3>
-          <span class="contact__subtitle">raufabdur886@gmail.com</span>
-        </div>
-      </div>
-      <div class="contact__information">
-        <i class="uil uil-map-marker contact__icon"></i>
-        <div>
-          <h3 class="contact__title">Location</h3>
-          <span class="contact__subtitle">Rawalpindi Pakistan</span>
-        </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Abdur Rauf. Built with precision &amp; passion.</span>
+        <span>Rawalpindi, Pakistan · Available Worldwide</span>
       </div>
     </div>
+  </footer>
 
-    <form action="https://formspree.io/f/xwpeezya" method="POST" class="contact__form grid" id="contactForm">
-      <div class="contact__inputs grid">
-          <div class="contact__content">
-              <label for="name" class="contact__label">Name</label>
-              <input type="text" id="name" name="name" class="contact__input" required />
-          </div>
-          <div class="contact__content">
-              <label for="email" class="contact__label">Email</label>
-              <input type="email" id="email" name="email" class="contact__input" required />
-          </div>
-          <div class="contact__content">
-              <label for="phone" class="contact__label">Phone Number</label>
-              <input type="tel" id="phone" name="phone" class="contact__input"  />
-          </div>
-      </div>
-      <div class="contact__content">
-        <label for="project" class="contact__label">Project</label>
-        <input type="text" id="project" name="project" class="contact__input" />
-      </div>
-      <div class="contact__content">
-          <label for="message" class="contact__label">Message</label>
-          <textarea id="message" name="message" cols="0" rows="7" class="contact__input" required></textarea>
-      </div>
-      <div>
-          <button type="submit" class="button button--flex">Send Message
-              <i class="uil uil-message button__icon"></i>
-          </button>
-      </div>
-  </form>
-  
+  <!-- Back to Top -->
+  <a href="#home" class="back-top" id="backToTop" aria-label="Back to top">
+    <i class="uil uil-arrow-up" aria-hidden="true"></i>
+  </a>
 
-
-  
-  
-  </div>
-</section>
-
-      
-    </main>
-
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-      <div class="footer__bg">
-        <div class="footer__container container grid">
-          <div>
-            <h1 class="footer__title">RAUF</h1>
-            <span class="footer__subtitle">Frontend developer</span>
-          </div>
-
-          <ul class="footer__links">
-            <li>
-              <a href="#services" class="footer__link">Services</a>
-            </li>
-            <li>
-              <a href="#portfolio" class="footer__link">Portfolio</a>
-            </li>
-            <li>
-              <a href="#contact" class="footer__link">Contactme</a>
-            </li>
-          </ul>
-
-          <div class="footer__socials">
-            <a
-              href="https://www.instagram.com/abdurrauf500/"
-              target="_blank"
-              class="footer__social"
-            >
-              <i class="uil uil-instagram"></i>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/abdur-rauf-a755a8360/"
-              target="_blank"
-              class="footer__social"
-            >
-              <i class="uil uil-linkedin-alt"></i>
-            </a>
-
-            <a
-              href="https://wa.me/+923701913453"
-              target="_blank"
-              class="footer__social"
-            >
-              <i class="uil uil-whatsapp"></i>
-            </a>
-            <a
-            href="https://www.facebook.com/profile.php?id=61556633222520"
-            target="_blank"
-            class="footer__social"
-          >
-            <i class="uil uil-facebook"></i>
-          </a>
-          </div>
-        </div>
-        <p class="footer__copy">&copy; ABDUR RAUF. All rights reserved.</p>
-
-      </div>
-    </footer>
-
-    <!--==================== SCROLL TOP ====================-->
-    <a href="#" class="scrollup" id="scroll-up">
-      <i class="uil uil-arrow-up scrollup__icon"></i>
-    </a>
-
-    <!--==================== SWIPER JS ====================-->
-    <script src="js/swiper-bundle.min.js"></script>
-
-
-
-    <!--==================== MAIN JS ====================-->
-    <script src="js/web.js"></script>
-  </body>
+  <!-- JavaScript -->
+  <script src="js/workspace.js"></script>
+</body>
 </html>

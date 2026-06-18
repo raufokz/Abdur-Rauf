@@ -61,7 +61,7 @@ tabs.forEach((tab) => {
     });
     target.classList.add('qualification__active');
 
-    tab.forEach((tab) => {
+    tabs.forEach((tab) => {
       tab.classList.remove('qualification__active');
     });
     tab.classList.add('qualification__active');
@@ -92,19 +92,23 @@ modalCloses.forEach((modalClose) => {
 });
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-let swiperPortfolio = new Swiper('.portfolio__container', {
-  cssMode: true,
-  loop: true,
+const portfolioSlider = document.querySelector('.portfolio__container.swiper');
 
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-});
+if (portfolioSlider) {
+  let swiperPortfolio = new Swiper(portfolioSlider, {
+    cssMode: true,
+    loop: true,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+}
 
 /*==================== TESTIMONIAL ====================*/
 let swiperTestimonial = new Swiper('.testimonial__container', {
