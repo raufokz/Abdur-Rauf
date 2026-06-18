@@ -25,7 +25,7 @@ if (cursorDot && cursorRing) {
     requestAnimationFrame(rafFollow);
   })();
 
-  qsa('a, button, .magnetic, .skill-tab, .svc-tab, .nav-link, .proj-card, .price-card, .svc-card').forEach(el => {
+  qsa('a, button, .magnetic, .sp-tab, .svc-tab, .nav-link, .proj-card, .price-card, .svc-card, .desk-item').forEach(el => {
     el.addEventListener('mouseenter', () => cursorRing.classList.add('hover'));
     el.addEventListener('mouseleave', () => cursorRing.classList.remove('hover'));
   });
@@ -164,7 +164,7 @@ const featuredProjects = [
     result: 'Unified dashboard reducing response time by 60% and improving lead conversion.',
   },
   {
-    name: 'SoftoTeam',
+    name: 'Company Hub',
     category: 'Angular Application',
     image: 'assets/images/projects/softoteam.png',
     fallback: 'assets/images/projects/softoteam.png',
@@ -196,6 +196,17 @@ const featuredProjects = [
     problem: 'Needed a fast, engaging quiz experience with immediate real-time feedback.',
     result: 'Smooth quiz flow deployed on Vercel with near-instant score calculations.',
   },
+  {
+    name: 'Shooter Game',
+    category: 'JavaScript Game',
+    image: 'assets/images/projects/shooter_game.png',
+    fallback: 'assets/images/projects/shooter_game.webp',
+    link: 'https://shootergame-raufokz.netlify.app',
+    tech: ['HTML', 'CSS', 'JavaScript', 'Canvas'],
+    description: 'Browser-based arcade shooter with keyboard controls, score tracking, and fast Canvas rendering.',
+    problem: 'Needed a playful proof of JavaScript game logic, collision detection, and responsive interaction.',
+    result: 'A lightweight mini-game that adds personality to the portfolio and proves interactive front-end skills.',
+  },
 ];
 
 const allProjects = [
@@ -205,10 +216,10 @@ const allProjects = [
   { name: 'Seven Tech LLC',     category: 'WordPress',   image: 'assets/images/projects/seventechllc.webp',         fallback: 'assets/images/projects/seventechllc.webp',         link: 'https://seventechllc.com',                          tech: ['WordPress', 'PHP'],                 description: 'Tech company website with service pages and contact integration.' },
   { name: 'Deals Down',         category: 'WordPress',   image: 'assets/images/projects/DealsDown_Logo.png',        fallback: 'assets/images/projects/DealsDown_Logo.png',        link: 'https://dealsdown.com',                             tech: ['WordPress', 'WooCommerce'],         description: 'Deal aggregator platform built on WordPress and WooCommerce.' },
   { name: 'One Church United',  category: 'Laravel',     image: 'assets/images/projects/onechurchunited.webp',      fallback: 'assets/images/projects/onechurchunited.webp',      link: 'https://onechurchuniteddmv.com',                    tech: ['Laravel', 'PHP', 'MySQL'],          description: 'Church community management platform with events and donor tools.' },
-  { name: 'Strong Enough',      category: 'Laravel',     image: 'assets/images/projects/strongenoughtobreak31.webp',fallback: 'assets/images/projects/strongenoughtobreak31.webp',link: 'https://strongenoughtobreak31.com',                  tech: ['Laravel', 'PHP'],                   description: 'Motivational brand website with custom Laravel backend.' },
+  { name: 'Strong Enough To Break', category: 'Laravel', image: 'assets/images/projects/strongenoughtobreak31.webp',fallback: 'assets/images/projects/strongenoughtobreak31.webp',link: 'https://strongenoughtobreak31.com',                  tech: ['Laravel', 'PHP'],                   description: 'Motivational brand website with custom Laravel backend.' },
   { name: 'Attendance System',  category: 'Laravel',     image: 'assets/images/projects/attendance_ms.png',         fallback: 'assets/images/projects/attendance_ms.png',         link: 'https://github.com/raufokz/attendance-system',      tech: ['Laravel', 'PHP', 'MySQL', 'Chart.js'], description: 'Employee attendance management system with analytics dashboard.' },
-  { name: 'Shooter Game',       category: 'JavaScript',  image: 'assets/images/projects/shooter_game.png',          fallback: 'assets/images/projects/shooter_game.webp',         link: 'https://shootergame-raufokz.netlify.app',           tech: ['HTML', 'CSS', 'JavaScript', 'Canvas'], description: 'Browser-based shooter game built with Canvas API.' },
-  { name: 'Capital Education',  category: 'JavaScript',  image: 'assets/images/projects/capitaledusystem.png',      fallback: 'assets/images/projects/capitaledusystem.webp',     link: 'https://capital-education-system.netlify.app',      tech: ['HTML', 'CSS', 'JavaScript'],        description: 'Educational system web app with course listings and student portal.' },
+  { name: 'Capital Education System', category: 'JavaScript', image: 'assets/images/projects/capitaledusystem.png', fallback: 'assets/images/projects/capitaledusystem.webp',     link: 'https://capital-education-system.netlify.app',      tech: ['HTML', 'CSS', 'JavaScript'],        description: 'Educational system web app with course listings and student portal.' },
+  { name: 'Company Hub CRM',    category: 'CRM',         image: 'assets/images/perfex_crm.png',                     fallback: 'assets/images/projects/private.jpeg',             link: 'https://github.com/arham-anees/perfex-crm',         tech: ['Perfex CRM', 'PHP', 'MySQL'],       description: 'CRM customization workspace for teams, client records, and operational follow-ups.' },
   { name: 'Azure Heights Hotel',category: 'JavaScript',  image: 'assets/images/projects/azure.png',                 fallback: 'assets/images/projects/azure.png',                 link: 'https://azure-hotel.netlify.app',                   tech: ['HTML', 'CSS', 'JavaScript'],        description: 'Elegant hotel booking UI with room gallery and contact forms.' },
   { name: 'Lelameid',           category: 'JavaScript',  image: 'assets/images/projects/lelameid.svg',              fallback: 'assets/images/projects/lelameid.svg',              link: 'https://lelameid.netlify.app',                      tech: ['HTML', 'CSS', 'JavaScript'],        description: 'Creative branding and portfolio microsite.' },
   { name: 'Perfex CRM Setup',   category: 'CRM',         image: 'assets/images/projects/private.jpeg',              fallback: 'assets/images/projects/private.jpeg',              link: 'https://github.com/arham-anees/perfex-crm',         tech: ['Perfex CRM', 'PHP', 'MySQL'],       description: 'Custom Perfex CRM modules, workflow automation, and white-label setup.' },
@@ -360,7 +371,7 @@ function buildProjectFilters() {
     const rows = qs('#projectMarquees');
     if (!rows) return;
     if (v === 'all') {
-      qsa('.project-marquee-row', rows).forEach(r => { r.style.display = ''; });
+      buildMarqueeRows();
     } else {
       // Show all rows but build them from filtered data
       const filtered = allProjects.filter(p => p.category.toLowerCase().includes(v));
@@ -449,41 +460,39 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 qsa('.counter').forEach(el => counterObserver.observe(el));
 
-/* ===== SKILL BAR ANIMATIONS ===== */
+/* ===== SUPERPOWER BAR ANIMATIONS ===== */
 const skillBarObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-    qsa('.skill-bar-fill', entry.target).forEach(bar => {
+    qsa('.pc-power-fill', entry.target).forEach(bar => {
       bar.style.width = `${bar.dataset.width}%`;
     });
   });
 }, { threshold: 0.1 });
-qsa('.skills-panel').forEach(panel => skillBarObserver.observe(panel));
+qsa('.sp-panel').forEach(panel => skillBarObserver.observe(panel));
 
-/* ===== SKILLS TABS ===== */
-const skillTabs   = qsa('.skill-tab');
-const skillPanels = qsa('.skills-panel');
+/* ===== SUPERPOWER TABS ===== */
+const skillTabs   = qsa('.sp-tab');
+const skillPanels = qsa('.sp-panel');
 skillTabs.forEach(tab => {
   tab.addEventListener('click', () => {
     skillTabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
     skillPanels.forEach(p => p.classList.remove('active'));
     tab.classList.add('active');
     tab.setAttribute('aria-selected', 'true');
-    const panelId = `panel-${tab.dataset.tab}`;
+    const panelId = `sp-panel-${tab.dataset.tab.replace('sp-', '')}`;
     const panel = qs(`#${panelId}`);
     if (panel) {
       panel.classList.add('active');
-      // Animate bars for newly shown panel
-      qsa('.skill-bar-fill', panel).forEach(bar => {
+      qsa('.pc-power-fill', panel).forEach(bar => {
         bar.style.width = '0';
         setTimeout(() => { bar.style.width = `${bar.dataset.width}%`; }, 50);
       });
     }
   });
 });
-// Trigger bars for default active panel
 setTimeout(() => {
-  qsa('#panel-frontend .skill-bar-fill').forEach(bar => { bar.style.width = `${bar.dataset.width}%`; });
+  qsa('#sp-panel-frontend .pc-power-fill').forEach(bar => { bar.style.width = `${bar.dataset.width}%`; });
 }, 300);
 
 /* ===== SERVICE CARDS — inject "Learn more →" on each card ===== */
@@ -521,7 +530,7 @@ const revealObserver = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) { entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target); }
   });
 }, { threshold: 0.08 });
-qsa('.reveal').forEach(el => revealObserver.observe(el));
+qsa('.reveal, .reveal-fade').forEach(el => revealObserver.observe(el));
 
 /* ===== STAT CARD PROGRESS BARS ===== */
 const statCardObserver = new IntersectionObserver((entries) => {
@@ -666,7 +675,7 @@ document.head.appendChild(style);
 
 /* ===== JOURNEY ROCKET (scroll-driven) ===== */
 const journeyMap    = qs('#journeyMap');
-const journeyRocket = qs('#journeyRocket');
+const journeyRocket = qs('#journeyCart');
 if (journeyMap && journeyRocket) {
   const jObserver = new IntersectionObserver((entries) => {
     if (!entries[0].isIntersecting) return;
