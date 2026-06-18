@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Allow: /assets/doc/pdf/AbdurRauf.pdf
 
 Sitemap: https://raufokz.github.io/Abdur-Rauf/sitemap.xml
