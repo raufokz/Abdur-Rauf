@@ -9,6 +9,156 @@
 const qs  = (sel, root = document) => root.querySelector(sel);
 const qsa = (sel, root = document) => [...root.querySelectorAll(sel)];
 
+/* ===== HERO ORBIT GALLERY ===== */
+(function heroOrbit() {
+  const orbit   = qs('#heroOrbit');
+  const mainImg = qs('#orbitMain');
+  const mainSrc = qs('#orbitMainSrc');
+  const thumbs  = qsa('.orbit-thumb', orbit || document);
+  if (!orbit || !mainImg || !thumbs.length) return;
+
+  let index = 0;
+  let timer = null;
+
+  const setActive = (i) => {
+    index = (i + thumbs.length) % thumbs.length;
+    const t = thumbs[index];
+    const img  = t.dataset.img;
+    const webp = t.dataset.webp;
+    // Swap center photo (prefer WebP), with graceful fallback
+    if (mainSrc && webp) mainSrc.srcset = webp;
+    mainImg.src = img;
+    // Restart the fade animation
+    mainImg.style.animation = 'none';
+    void mainImg.offsetWidth;
+    mainImg.style.animation = '';
+    thumbs.forEach((el, j) => el.classList.toggle('is-active', j === index));
+  };
+
+  // Fallback if a center image fails to load
+  mainImg.addEventListener('error', () => {
+    if (!mainImg.src.endsWith('profile.jpg')) mainImg.src = 'assets/images/my-images/profile.jpg';
+  });
+
+  const advance = () => setActive(index + 1);
+  const start = () => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    stop();
+    timer = window.setInterval(advance, 3500);
+  };
+  const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+
+  // Click / focus a thumbnail to feature it
+  thumbs.forEach((t, i) => {
+    t.addEventListener('click', () => { setActive(i); start(); });
+  });
+
+  // Pause auto-rotation while interacting
+  orbit.addEventListener('mouseenter', stop);
+  orbit.addEventListener('mouseleave', start);
+  orbit.addEventListener('focusin', stop);
+  orbit.addEventListener('focusout', start);
+
+  start();
+})();
+
+/* ===== SKILL DETAIL MODAL ===== */
+(function skillModal() {
+  const cards = qsa('.power-card');
+  const modal = qs('#skillModal');
+  if (!cards.length || !modal) return;
+
+  // Short, human-readable descriptions shown in the modal (keyed by skill name).
+  const SKILL_DESC = {
+    'React': 'I build fast, component-driven interfaces with React — hooks, clean state management, and reusable UI that scales as the product grows.',
+    'Angular': 'Enterprise single-page apps in Angular using TypeScript, RxJS, and Material — structured, maintainable, and production-ready.',
+    'JavaScript': 'Modern ES6+ JavaScript — async/await, clean DOM work, and the logic that powers interactive, dynamic web experiences.',
+    'TypeScript': 'Type-safe JavaScript with interfaces and generics — fewer runtime bugs and code that stays easy to maintain at scale.',
+    'HTML5': 'Semantic, accessible, SEO-ready markup that gives every project a clean, standards-compliant foundation.',
+    'CSS3 / SCSS': 'Pixel-accurate styling with modern CSS and SCSS — Grid, Flexbox, and smooth animations that look right on every screen.',
+    'Tailwind CSS': 'Rapid, consistent interfaces built with Tailwind’s utility-first workflow and reusable design systems.',
+    'Bootstrap': 'Responsive, mobile-first layouts shipped quickly using Bootstrap’s grid and component library.',
+    'Laravel': 'Full-stack Laravel apps — MVC architecture, Eloquent ORM, queues, and secure REST APIs for SaaS platforms and dashboards.',
+    'PHP': 'Object-oriented PHP and custom applications, including CodeIgniter — reliable back-ends tailored to real business logic.',
+    'MySQL': 'Well-structured relational databases with thoughtful schema design, indexing, and query optimization.',
+    'REST APIs': 'Clean, well-documented REST APIs with authentication, validation, and rate limiting for safe, scalable integrations.',
+    'Authentication': 'Secure auth flows with JWT, OAuth, and Laravel Sanctum — protecting users and data the right way.',
+    'Admin Panels': 'Custom admin dashboards with full CRUD and role-based access so teams can manage everything from one place.',
+    'WordPress': 'Custom themes, plugins, and WooCommerce builds — flexible WordPress sites that are fast and easy to manage.',
+    'WooCommerce': 'Complete online stores with WooCommerce — products, payments, and extensions configured to sell.',
+    'Netlify': 'Modern deployment on Netlify with CI/CD, custom domains, and HTTPS for fast, reliable hosting.',
+    'GitHub': 'Version control and team collaboration with Git and GitHub — clean history, branches, and pull requests.',
+    'Custom Plugins': 'Bespoke WordPress plugins in PHP that add exactly the functionality a project needs.',
+    'Web Hosting': 'End-to-end hosting setup — cPanel, SSL, and DNS — configured for performance and uptime.',
+    'Virtual Assistant': 'Reliable VA support: email management, scheduling, customer support, and day-to-day admin handled for you.',
+    'Real Estate Listing': 'MLS and property listing management with accurate data and compelling, well-formatted descriptions.',
+    'Product Listing': 'SEO-optimized product uploads for Amazon, eBay, Shopify, and WooCommerce that turn browsers into buyers.',
+    'GoHighLevel': 'GoHighLevel CRM setup — funnels, pipelines, and automations that capture and nurture leads on autopilot.',
+    'SEO Optimization': 'On-page SEO, schema markup, and Core Web Vitals improvements that grow organic traffic and rankings.',
+    'AI Photo Design': 'AI-enhanced visuals — background removal, color grading, and creative compositing for standout brand imagery.'
+  };
+
+  const mIcon = qs('#smIcon'), mRarity = qs('#smRarity'), mTitle = qs('#smTitle'),
+        mDesc = qs('#smDesc'), mLevel = qs('#smLevel'), mPercent = qs('#smPercent'),
+        mFill = qs('#smFill'), mClose = qs('#smClose');
+  let lastFocused = null;
+
+  const open = (card) => {
+    const iconEl   = qs('.pc-icon', card);
+    const rarityEl = qs('.pc-rarity', card);
+    const power    = card.dataset.power || qs('.pc-power-fill', card)?.dataset.width || '';
+
+    const name = qs('h4', card)?.textContent.trim() || '';
+    mIcon.innerHTML   = iconEl ? iconEl.innerHTML : '';
+    mTitle.textContent = name;
+    mDesc.textContent  = SKILL_DESC[name] || qs('p', card)?.textContent || '';
+    mLevel.textContent = qs('.pc-level', card)?.textContent || '';
+
+    mRarity.className = 'sm-rarity';
+    if (rarityEl) {
+      mRarity.textContent = rarityEl.textContent.trim();
+      if (rarityEl.classList.contains('pc-rarity-epic'))      mRarity.classList.add('sm-rarity-epic');
+      if (rarityEl.classList.contains('pc-rarity-legendary')) mRarity.classList.add('sm-rarity-legendary');
+      mRarity.style.display = '';
+    } else {
+      mRarity.style.display = 'none';
+    }
+
+    mPercent.textContent = power ? power + '%' : '';
+    mFill.style.width = '0';
+
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    lastFocused = document.activeElement;
+    requestAnimationFrame(() => { if (power) mFill.style.width = power + '%'; });
+    mClose?.focus();
+  };
+
+  const close = () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocused && lastFocused.focus) lastFocused.focus();
+  };
+
+  cards.forEach(card => {
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+    card.addEventListener('click', () => open(card));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(card); }
+    });
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal || e.target.classList.contains('skill-modal-backdrop') || e.target.closest('#smClose')) close();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) close();
+  });
+})();
+
 /* ===== CUSTOM CURSOR ===== */
 const cursorDot  = qs('#cursorDot');
 const cursorRing = qs('#cursorRing');

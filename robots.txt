@@ -1,5 +1,15 @@
+# robots.txt — Abdur Rauf Portfolio (https://raufokz.github.io/Abdur-Rauf/)
+# Allow all reputable crawlers full access.
+
 User-agent: *
 Allow: /
-Allow: /assets/doc/pdf/AbdurRauf.pdf
+
+# Let search engines crawl CSS, JS and images for accurate rendering/indexing.
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# No private areas to block.
+Disallow:
 
 Sitemap: https://raufokz.github.io/Abdur-Rauf/sitemap.xml

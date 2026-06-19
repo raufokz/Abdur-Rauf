@@ -14,19 +14,29 @@
   <meta name="format-detection" content="telephone=yes" />
   <meta name="theme-color" content="#0F172A" />
 
+  <!-- Local SEO / geo targeting -->
+  <meta name="geo.region" content="PK-PB" />
+  <meta name="geo.placename" content="Rawalpindi, Pakistan" />
+  <meta name="geo.position" content="33.5651;73.0169" />
+  <meta name="ICBM" content="33.5651, 73.0169" />
+
   <link rel="canonical" href="https://raufokz.github.io/Abdur-Rauf/" />
   <link rel="alternate" hreflang="en" href="https://raufokz.github.io/Abdur-Rauf/" />
 
   <meta property="og:title" content="Abdur Rauf — Full Stack Developer | Laravel, React & WordPress" />
   <meta property="og:description" content="Full Stack Developer helping startups and agencies build fast, scalable web apps — Laravel, React, WordPress, SEO, VA, GoHighLevel and more." />
   <meta property="og:image" content="https://raufokz.github.io/Abdur-Rauf/assets/images/my-images/profile.webp" />
+  <meta property="og:image:secure_url" content="https://raufokz.github.io/Abdur-Rauf/assets/images/my-images/profile.webp" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="900" />
+  <meta property="og:image:height" content="1351" />
   <meta property="og:image:alt" content="Portrait of Abdur Rauf, Full Stack Developer" />
   <meta property="og:url" content="https://raufokz.github.io/Abdur-Rauf/" />
   <meta property="og:type" content="website" />
   <meta name="p:domain_verify" content="dc7c524b0234390fda7c3c03fd837ce0"/>
   <meta property="og:site_name" content="Abdur Rauf Portfolio" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:updated_time" content="2026-06-18" />
+  <meta property="og:updated_time" content="2026-06-19" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Abdur Rauf — Full Stack Developer | Laravel, React & WordPress" />
   <meta name="twitter:description" content="Full Stack Developer helping startups and agencies build fast, scalable web apps — Laravel, React, WordPress, SEO, VA, GoHighLevel and more." />
@@ -68,7 +78,7 @@
         "telephone": "+923701913453",
         "address": {"@type":"PostalAddress","addressLocality":"Rawalpindi","addressCountry":"PK"},
         "knowsAbout": ["Laravel","PHP","React","Angular","WordPress","MySQL","REST APIs","JavaScript","TypeScript","SaaS Development","SEO Services","GoHighLevel","Virtual Assistant","Product Listing","Real Estate Listing","Netlify Deployment"],
-        "sameAs": ["https://github.com/raufokz","https://www.linkedin.com/in/abdur-rauf-a755a8360/","https://www.instagram.com/abdurrauf500/"]
+        "sameAs": ["https://github.com/raufokz","https://www.linkedin.com/in/abdur-rauf-orakzai","https://www.instagram.com/abdurrauf500/"]
       },
       {
         "@type": "WebSite",
@@ -243,7 +253,7 @@
 
           <div class="hero-stats reveal reveal-delay-4">
             <div class="hstat">
-              <div class="hstat-num"><span class="counter" data-counter-target="6">0</span>+</div>
+              <div class="hstat-num"><span class="counter" data-counter-target="3">0</span>+</div>
               <div class="hstat-label">Yrs Exp</div>
             </div>
             <div class="hstat-div"></div>
@@ -264,31 +274,15 @@
           </div>
         </div>
 
-        <!-- Right: Workspace Scene -->
+        <!-- Right: Orbiting Photo Gallery -->
         <div class="hero-workspace reveal-fade">
-          <!-- Floating tech badges -->
-          <div class="float-badge fb-react"   data-parallax="10">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" width="18" height="18"> React
-          </div>
-          <div class="float-badge fb-angular"  data-parallax="15">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" alt="" width="18" height="18"> Angular
-          </div>
-          <div class="float-badge fb-laravel"  data-parallax="8">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="" width="18" height="18"> Laravel
-          </div>
-          <div class="float-badge fb-wp"       data-parallax="12">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-original.svg" alt="" width="18" height="18"> WordPress
-          </div>
-          <div class="float-badge fb-php"      data-parallax="6">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="" width="18" height="18"> PHP
-          </div>
+          <!-- Floating capability tags -->
+          <div class="float-badge fb-react"   data-parallax="10"><i class="uil uil-brackets-curly" aria-hidden="true"></i> Web Developer</div>
+          <div class="float-badge fb-laravel" data-parallax="8"><i class="uil uil-cog" aria-hidden="true"></i> Automation</div>
+          <div class="float-badge fb-angular" data-parallax="15"><i class="uil uil-search" aria-hidden="true"></i> SEO Expert</div>
+          <div class="float-badge fb-wp"      data-parallax="12"><i class="uil uil-star" aria-hidden="true"></i> 5.0 Rating</div>
 
-          <!-- Sticky notes -->
-          <div class="sticky-note sn-1">💡 Ship it fast!</div>
-          <div class="sticky-note sn-2">🚀 Always learning</div>
-          <div class="sticky-note sn-3">☕ Fuel = Coffee</div>
-
-          <!-- Status mini card -->
+          <!-- Status chips -->
           <div class="ws-badge ws-badge-top">
             <span class="ws-badge-dot"></span> Open to Work
           </div>
@@ -296,30 +290,44 @@
             ✅ 19+ Projects Delivered
           </div>
 
-          <!-- Desk lamp glow -->
-          <div class="desk-lamp-glow"></div>
+          <!-- Orbiting photo gallery -->
+          <div class="hero-orbit" id="heroOrbit" aria-label="Photo gallery of Abdur Rauf">
+            <div class="orbit-glow"></div>
+            <div class="orbit-rings" aria-hidden="true">
+              <span class="orbit-track ot-1"></span>
+              <span class="orbit-track ot-2"></span>
+            </div>
 
-          <!-- Profile photo card -->
-          <div class="ws-photo-card">
-            <div class="ws-photo-glow"></div>
-            <img class="ws-photo-img" src="assets/images/my-images/profile.webp" alt="Abdur Rauf" width="340" height="430" loading="eager" />
+            <!-- Center main photo -->
+            <div class="orbit-center">
+              <picture>
+                <source id="orbitMainSrc" srcset="assets/images/my-images/profile.webp" type="image/webp" />
+                <img id="orbitMain" src="assets/images/my-images/profile.jpg" alt="Abdur Rauf" width="260" height="260" loading="eager" fetchpriority="high" />
+              </picture>
+            </div>
+
+            <!-- Rotating ring of thumbnails -->
+            <div class="orbit-ring" id="orbitRing">
+              <button class="orbit-thumb is-active" type="button" style="--a:0deg"   data-webp="assets/images/my-images/profile.webp" data-img="assets/images/my-images/profile.jpg"  aria-label="Show portrait 1">
+                <img src="assets/images/my-images/profile.webp" alt="Abdur Rauf portrait" loading="eager" />
+              </button>
+              <button class="orbit-thumb" type="button" style="--a:60deg"  data-webp="assets/images/my-images/1.webp" data-img="assets/images/my-images/1.jpg"   aria-label="Show portrait 2">
+                <img src="assets/images/my-images/1.webp" alt="Abdur Rauf portrait" loading="lazy" />
+              </button>
+              <button class="orbit-thumb" type="button" style="--a:120deg" data-webp="assets/images/my-images/2.webp" data-img="assets/images/my-images/2.jpeg"  aria-label="Show portrait 3">
+                <img src="assets/images/my-images/2.webp" alt="Abdur Rauf portrait" loading="lazy" />
+              </button>
+              <button class="orbit-thumb" type="button" style="--a:180deg" data-webp="assets/images/my-images/3.webp" data-img="assets/images/my-images/3.jpeg"  aria-label="Show portrait 4">
+                <img src="assets/images/my-images/3.webp" alt="Abdur Rauf portrait" loading="lazy" />
+              </button>
+              <button class="orbit-thumb" type="button" style="--a:240deg" data-webp="assets/images/my-images/4.webp" data-img="assets/images/my-images/4.png"   aria-label="Show portrait 5">
+                <img src="assets/images/my-images/4.webp" alt="Abdur Rauf portrait" loading="lazy" />
+              </button>
+              <button class="orbit-thumb" type="button" style="--a:300deg" data-webp="assets/images/my-images/5.webp" data-img="assets/images/my-images/5.jpeg"  aria-label="Show portrait 6">
+                <img src="assets/images/my-images/5.webp" alt="Abdur Rauf portrait" loading="lazy" />
+              </button>
+            </div>
           </div>
-
-          <!-- Desk surface with items -->
-          <div class="desk-surface">
-            <div class="desk-item di-laptop"     title="Click me!" id="deskLaptop">💻</div>
-            <div class="desk-item di-mug"        title="☕ Coffee!" id="deskMug">☕</div>
-            <div class="desk-item di-headphones" title="🎧 Music!"  id="deskHeadphones">🎧</div>
-            <div class="desk-item di-book"       title="📚 Reading!">📚</div>
-            <div class="desk-item di-plant"      title="🌱 Plants!">🌿</div>
-            <div class="desk-item di-controller" title="🎮 Gaming!" id="deskController">🎮</div>
-          </div>
-
-          <!-- Floating mini images -->
-          <div class="ws-fi ws-fi-1"><img src="assets/images/my-images/1.webp" alt="" loading="eager" /></div>
-          <div class="ws-fi ws-fi-2"><img src="assets/images/my-images/2.webp" alt="" loading="eager" /></div>
-          <div class="ws-fi ws-fi-3"><img src="assets/images/my-images/3.webp" alt="" loading="eager" /></div>
-          <div class="ws-fi ws-fi-4"><img src="assets/images/my-images/5.webp" alt="" loading="eager" /></div>
         </div>
       </div>
 
@@ -338,39 +346,52 @@
         </div>
 
         <div class="about-grid">
-          <!-- Scrapboard -->
-          <div class="scrapboard reveal">
-            <!-- Polaroid photo -->
-            <div class="polaroid tilt">
-              <img src="assets/images/my-images/profile.webp" alt="Abdur Rauf" class="polaroid-img" />
-              <div class="polaroid-caption">Abdur Rauf 📍 Rawalpindi</div>
-              <div class="polaroid-tape pt-tl"></div>
-              <div class="polaroid-tape pt-tr"></div>
+          <!-- Profile Card -->
+          <div class="about-card reveal">
+            <div class="about-card-head">
+              <div class="ac-avatar">
+                <picture>
+                  <source srcset="assets/images/my-images/profile.webp" type="image/webp" />
+                  <img src="assets/images/my-images/profile.jpg" alt="Abdur Rauf" loading="lazy" />
+                </picture>
+              </div>
+              <div class="ac-id">
+                <h3 class="ac-name">Abdur Rauf</h3>
+                <p class="ac-role">Full Stack Developer</p>
+                <div class="ac-rating">
+                  <span class="ac-stars">★★★★★</span>
+                  <span class="ac-rating-val">5.0</span>
+                </div>
+                <span class="ac-availability"><span class="ac-av-dot"></span> Available for work</span>
+              </div>
             </div>
 
-            <!-- Pinned info cards -->
-            <div class="pin-card pc-1 tilt">
-              <span class="pin"></span>
-              <div class="pc-label">Location</div>
-              <div class="pc-value">📍 Rawalpindi, Pakistan</div>
-            </div>
-            <div class="pin-card pc-2 tilt">
-              <span class="pin"></span>
-              <div class="pc-label">Experience</div>
-              <div class="pc-value">⚡ 6+ Years</div>
-            </div>
-            <div class="pin-card pc-3 tilt">
-              <span class="pin"></span>
-              <div class="pc-label">Availability</div>
-              <div class="pc-value">🌍 Freelance / Remote</div>
+            <div class="ac-stats">
+              <div class="ac-stat"><b>3+</b><span>Years</span></div>
+              <div class="ac-stat"><b>19+</b><span>Projects</span></div>
+              <div class="ac-stat"><b>3</b><span>Continents</span></div>
             </div>
 
-            <!-- Fun facts -->
-            <div class="fun-facts">
-              <div class="ff-card">☕ Coffee Lover</div>
-              <div class="ff-card">🎮 Gamer</div>
-              <div class="ff-card">🚀 Problem Solver</div>
-              <div class="ff-card">📚 Continuous Learner</div>
+            <div class="ac-info">
+              <div class="ac-info-row">
+                <span class="ac-info-icon"><i class="uil uil-map-marker"></i></span>
+                <div class="ac-info-text"><span>Location</span><b>Rawalpindi, Pakistan</b></div>
+              </div>
+              <div class="ac-info-row">
+                <span class="ac-info-icon"><i class="uil uil-clock"></i></span>
+                <div class="ac-info-text"><span>Experience</span><b>3+ Years Building</b></div>
+              </div>
+              <div class="ac-info-row">
+                <span class="ac-info-icon"><i class="uil uil-globe"></i></span>
+                <div class="ac-info-text"><span>Availability</span><b>Freelance / Remote</b></div>
+              </div>
+            </div>
+
+            <div class="ac-tags">
+              <span class="ac-tag">☕ Coffee Lover</span>
+              <span class="ac-tag">🎮 Gamer</span>
+              <span class="ac-tag">🚀 Problem Solver</span>
+              <span class="ac-tag">📚 Lifelong Learner</span>
             </div>
           </div>
 
@@ -1135,11 +1156,11 @@
                   <div class="ci-link-value">github.com/raufokz</div>
                 </div>
               </a>
-              <a href="https://www.linkedin.com/in/abdur-rauf-a755a8360/" target="_blank" rel="noopener noreferrer" class="ci-link ci-li">
+              <a href="https://www.linkedin.com/in/abdur-rauf-orakzai" target="_blank" rel="noopener noreferrer" class="ci-link ci-li">
                 <div class="ci-link-icon"><i class="uil uil-linkedin"></i></div>
                 <div>
                   <div class="ci-link-label">LinkedIn</div>
-                  <div class="ci-link-value">abdur-rauf-a755a8360</div>
+                  <div class="ci-link-value">abdur-rauf-orakzai</div>
                 </div>
               </a>
             </div>
@@ -1156,7 +1177,11 @@
 
           <!-- Right: Contact form -->
           <div class="contact-form-wrap reveal reveal-delay-1">
-            <form id="contactForm" class="contact-form" action="https://formspree.io/f/xwpeezya" method="POST" novalidate>
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/xaqzrjow" method="POST" novalidate>
+              <div class="cf-form-head">
+                <h3>Start a Project</h3>
+                <p>Tell me what you need — I reply within 24 hours.</p>
+              </div>
               <div class="cf-row">
                 <div class="cf-group">
                   <label for="cf-name" class="cf-label">Your Name</label>
@@ -1165,6 +1190,16 @@
                 <div class="cf-group">
                   <label for="cf-email" class="cf-label">Email Address</label>
                   <input type="email" id="cf-email" name="email" class="cf-input" placeholder="john@company.com" required autocomplete="email" />
+                </div>
+              </div>
+              <div class="cf-row">
+                <div class="cf-group">
+                  <label for="cf-phone" class="cf-label">Phone Number <span class="cf-optional">Optional</span></label>
+                  <input type="tel" id="cf-phone" name="phone" class="cf-input" placeholder="+1 555 123 4567" autocomplete="tel" inputmode="tel" />
+                </div>
+                <div class="cf-group">
+                  <label for="cf-subject" class="cf-label">Subject <span class="cf-optional">Optional</span></label>
+                  <input type="text" id="cf-subject" name="subject" class="cf-input" placeholder="Project summary" autocomplete="off" />
                 </div>
               </div>
               <div class="cf-group">
@@ -1227,6 +1262,25 @@
     </section>
   </main>
 
+  <!-- ========== SKILL DETAIL MODAL ========== -->
+  <div class="skill-modal" id="skillModal" role="dialog" aria-modal="true" aria-labelledby="smTitle" aria-hidden="true">
+    <div class="skill-modal-backdrop"></div>
+    <div class="skill-modal-card">
+      <button class="sm-close" id="smClose" type="button" aria-label="Close">
+        <i class="uil uil-times"></i>
+      </button>
+      <div class="sm-icon" id="smIcon"></div>
+      <span class="sm-rarity" id="smRarity">RARE</span>
+      <h3 class="sm-title" id="smTitle">Skill</h3>
+      <p class="sm-desc" id="smDesc">Description</p>
+      <div class="sm-meta">
+        <span id="smLevel">Level 8 / 10</span>
+        <span id="smPercent">85%</span>
+      </div>
+      <div class="sm-bar"><div class="sm-bar-fill" id="smFill"></div></div>
+    </div>
+  </div>
+
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
@@ -1236,7 +1290,7 @@
           <p class="footer-tagline">Building digital experiences that matter.</p>
           <div class="footer-socials">
             <a href="https://github.com/raufokz" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="uil uil-github"></i></a>
-            <a href="https://www.linkedin.com/in/abdur-rauf-a755a8360/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="uil uil-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/abdur-rauf-orakzai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="uil uil-linkedin"></i></a>
             <a href="https://wa.me/923701913453" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="uil uil-whatsapp"></i></a>
             <a href="mailto:raufabdur886@gmail.com" aria-label="Email"><i class="uil uil-envelope"></i></a>
             <a href="https://www.instagram.com/abdurrauf500/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="uil uil-instagram"></i></a>
@@ -1279,7 +1333,7 @@
         <div class="footer-col">
           <h4>Get a Free Quote</h4>
           <p class="footer-nl-desc">Drop your email and I'll get back to you with a free project estimate.</p>
-          <form class="footer-nl-form" action="https://formspree.io/f/mpwzqakq" method="POST">
+          <form class="footer-nl-form" action="https://formspree.io/f/xaqzrjow" method="POST">
             <input type="email" name="email" class="footer-nl-input" placeholder="Your email address" required />
             <button type="submit" class="footer-nl-btn">Get Quote</button>
           </form>
