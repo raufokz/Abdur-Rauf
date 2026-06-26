@@ -215,12 +215,14 @@ const mobileClose  = qs('#mobileClose');
 function openMobileMenu() {
   if (!mobileMenu) return;
   mobileMenu.classList.add('is-open');
+  navToggle?.classList.add('is-open');
   navToggle?.setAttribute('aria-expanded', 'true');
   document.body.style.overflow = 'hidden';
 }
 function closeMobileMenu() {
   if (!mobileMenu) return;
   mobileMenu.classList.remove('is-open');
+  navToggle?.classList.remove('is-open');
   navToggle?.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
 }
