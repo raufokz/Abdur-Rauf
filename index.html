@@ -737,14 +737,21 @@
           <div class="feat-dots" id="featuredDots"></div>
         </div>
 
-        <!-- All Projects Marquee -->
-        <div class="proj-marquee-section">
+        <!-- All Projects Slider -->
+        <div class="proj-marquee-section proj-slider-section">
           <div class="proj-filter-row" id="projectFilters"></div>
-          <div class="proj-marquees" id="projectMarquees">
-            <div class="proj-marquee-row row-fwd"  id="projRow1"></div>
-            <div class="proj-marquee-row row-rev"  id="projRow2"></div>
-            <div class="proj-marquee-row row-fwd"  id="projRow3"></div>
+          <div class="project-slider-shell">
+            <button class="project-nav-btn project-prev" id="projectPrev" type="button" aria-label="Previous projects">
+              <i class="uil uil-angle-left"></i>
+            </button>
+            <div class="proj-marquees project-slider-viewport" id="projectMarquees" aria-live="polite">
+              <div class="proj-marquee-row project-slider-track" id="projectSliderTrack"></div>
+            </div>
+            <button class="project-nav-btn project-next" id="projectNext" type="button" aria-label="Next projects">
+              <i class="uil uil-angle-right"></i>
+            </button>
           </div>
+          <div class="project-dots" id="projectDots" aria-label="Project slider pagination"></div>
         </div>
       </div>
     </section>

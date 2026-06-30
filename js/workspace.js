@@ -515,26 +515,108 @@ if (featured.viewport) {
   });
 }
 
-/* ===== THREE PROJECT MARQUEE ROWS ===== */
-function buildMarqueeRows() {
-  const row1 = qs('#projRow1');
-  const row2 = qs('#projRow2');
-  const row3 = qs('#projRow3');
-  if (!row1 || !row2 || !row3) return;
+/* ===== RESPONSIVE PROJECT SLIDER ===== */
+const projectSlider = {
+  track: qs('#projectSliderTrack'),
+  viewport: qs('#projectMarquees'),
+  dots: qs('#projectDots'),
+  prev: qs('#projectPrev'),
+  next: qs('#projectNext'),
+  filter: 'all',
+  page: 0,
+  perView: 3,
+  pages: 1,
+  scrollTimer: null,
+};
 
-  const projects = visibleProjects(allProjects);
-  const third = Math.ceil(projects.length / 3);
-  const slice1 = projects.slice(0, third);
-  const slice2 = projects.slice(third, third * 2);
-  const slice3 = projects.slice(third * 2);
-
-  // Each row is duplicated for infinite scroll
-  const makeHtml = (arr) => arr.map(p => projCardHtml(p)).join('');
-  row1.innerHTML = makeHtml(slice1) + makeHtml(slice1);
-  row2.innerHTML = makeHtml(slice2) + makeHtml(slice2);
-  row3.innerHTML = makeHtml(slice3) + makeHtml(slice3);
+function getProjectsPerView() {
+  if (window.innerWidth <= 768) return 1;
+  if (window.innerWidth <= 1100) return 2;
+  return 3;
 }
-buildMarqueeRows();
+
+function filteredProjects() {
+  const projects = visibleProjects(allProjects);
+  if (projectSlider.filter === 'all') return projects;
+  return projects.filter(p => p.category.toLowerCase().includes(projectSlider.filter));
+}
+
+function buildProjectSlider() {
+  if (!projectSlider.track) return;
+  const projects = filteredProjects();
+  projectSlider.track.innerHTML = projects.map(p => projCardHtml(p)).join('');
+  attachImageFallbacks(projectSlider.track);
+  projectSlider.page = 0;
+  recalcProjectSlider();
+  goToProjectPage(0, false);
+}
+
+function recalcProjectSlider() {
+  const total = qsa('.proj-card', projectSlider.track || document).length;
+  projectSlider.perView = getProjectsPerView();
+  projectSlider.pages = Math.max(1, Math.ceil(total / projectSlider.perView));
+  projectSlider.page = Math.min(projectSlider.page, projectSlider.pages - 1);
+  renderProjectDots();
+  updateProjectControls();
+}
+
+function projectPageOffset(page) {
+  const firstCard = qs('.proj-card', projectSlider.track);
+  if (!firstCard) return 0;
+  const styles = window.getComputedStyle(projectSlider.track);
+  const gap = parseFloat(styles.columnGap || styles.gap) || 0;
+  return page * projectSlider.perView * (firstCard.getBoundingClientRect().width + gap);
+}
+
+function goToProjectPage(page, smooth = true) {
+  if (!projectSlider.track) return;
+  projectSlider.page = Math.max(0, Math.min(page, projectSlider.pages - 1));
+  projectSlider.track.scrollTo({
+    left: projectPageOffset(projectSlider.page),
+    behavior: smooth ? 'smooth' : 'auto',
+  });
+  updateProjectControls();
+}
+
+function updateProjectControls() {
+  if (projectSlider.prev) projectSlider.prev.disabled = projectSlider.page <= 0;
+  if (projectSlider.next) projectSlider.next.disabled = projectSlider.page >= projectSlider.pages - 1;
+  qsa('button', projectSlider.dots || document).forEach((dot, i) => dot.classList.toggle('active', i === projectSlider.page));
+}
+
+function renderProjectDots() {
+  if (!projectSlider.dots) return;
+  projectSlider.dots.innerHTML = Array.from({ length: projectSlider.pages }, (_, i) =>
+    `<button type="button" aria-label="Go to project page ${i + 1}" class="${i === projectSlider.page ? 'active' : ''}"></button>`
+  ).join('');
+  qsa('button', projectSlider.dots).forEach((dot, i) => dot.addEventListener('click', () => goToProjectPage(i)));
+}
+
+function syncProjectPageFromScroll() {
+  if (!projectSlider.track) return;
+  const firstCard = qs('.proj-card', projectSlider.track);
+  if (!firstCard) return;
+  const styles = window.getComputedStyle(projectSlider.track);
+  const gap = parseFloat(styles.columnGap || styles.gap) || 0;
+  const pageWidth = projectSlider.perView * (firstCard.getBoundingClientRect().width + gap);
+  if (pageWidth <= 0) return;
+  projectSlider.page = Math.max(0, Math.min(Math.round(projectSlider.track.scrollLeft / pageWidth), projectSlider.pages - 1));
+  updateProjectControls();
+}
+
+projectSlider.prev?.addEventListener('click', () => goToProjectPage(projectSlider.page - 1));
+projectSlider.next?.addEventListener('click', () => goToProjectPage(projectSlider.page + 1));
+projectSlider.track?.addEventListener('scroll', () => {
+  clearTimeout(projectSlider.scrollTimer);
+  projectSlider.scrollTimer = setTimeout(syncProjectPageFromScroll, 80);
+}, { passive: true });
+window.addEventListener('resize', () => {
+  const oldPerView = projectSlider.perView;
+  recalcProjectSlider();
+  if (oldPerView !== projectSlider.perView) goToProjectPage(projectSlider.page, false);
+});
+
+buildProjectSlider();
 
 /* ===== PROJECT FILTERS (category sections) ===== */
 function buildProjectFilters() {
@@ -551,24 +633,8 @@ function buildProjectFilters() {
     qsa('.proj-filter', filterWrap).forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
     btn.classList.add('active');
     btn.setAttribute('aria-pressed', 'true');
-    const v = btn.dataset.filter;
-    // Filter the marquee rows by pausing / showing
-    const rows = qs('#projectMarquees');
-    if (!rows) return;
-    if (v === 'all') {
-      buildMarqueeRows();
-    } else {
-      // Show all rows but build them from filtered data
-      const filtered = visibleProjects(allProjects).filter(p => p.category.toLowerCase().includes(v));
-      if (filtered.length === 0) return;
-      const row1 = qs('#projRow1');
-      const row2 = qs('#projRow2');
-      const row3 = qs('#projRow3');
-      const html = filtered.map(p => projCardHtml(p)).join('');
-      if (row1) row1.innerHTML = html + html;
-      if (row2) row2.innerHTML = html + html;
-      if (row3) row3.innerHTML = html + html;
-    }
+    projectSlider.filter = btn.dataset.filter;
+    buildProjectSlider();
   });
 }
 buildProjectFilters();
@@ -586,7 +652,7 @@ async function applyProjectCountryVisibility() {
     hideUsCaRestrictedProjects = true;
   } finally {
     buildFeatured();
-    buildMarqueeRows();
+    buildProjectSlider();
   }
 }
 applyProjectCountryVisibility();
@@ -855,12 +921,17 @@ qsa('img[src^="assets/images/tech/"]').forEach(img => {
 });
 
 /* ===== IMAGE FALLBACKS ===== */
-qsa('img[data-fallback]').forEach(img => {
-  img.addEventListener('error', () => {
-    const fb = img.getAttribute('data-fallback');
-    if (fb && img.src !== fb) img.src = fb;
-  }, { once: true });
-});
+function attachImageFallbacks(root = document) {
+  qsa('img[data-fallback]', root).forEach(img => {
+    if (img.dataset.fallbackReady === 'true') return;
+    img.dataset.fallbackReady = 'true';
+    img.addEventListener('error', () => {
+      const fb = img.getAttribute('data-fallback');
+      if (fb && img.src !== fb) img.src = fb;
+    }, { once: true });
+  });
+}
+attachImageFallbacks();
 
 /* ===== KEYFRAME for progress bar ===== */
 const style = document.createElement('style');
