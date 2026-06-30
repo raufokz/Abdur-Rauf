@@ -303,6 +303,19 @@ const featuredProjects = [
     description: 'High-performance SaaS referral management system handling thousands of leads with automated commission tracking.',
     problem: 'Complex referral and commission logic scattered across manual spreadsheets.',
     result: 'Scalable Laravel backend with clean admin dashboard, real-time tracking, and 40% faster lead processing.',
+    restricted: 'us-ca',
+  },
+  {
+    name: 'Domestic RE',
+    category: 'Real Estate Lead Generation Website',
+    image: 'assets/images/projects/private.jpeg',
+    fallback: 'assets/images/projects/private.jpeg',
+    link: 'https://domestic-re.vercel.app/',
+    tech: ['Next.js', 'Supabase', 'Real Estate', 'Lead Generation'],
+    description: 'Modern real estate lead generation website with a clean responsive UI, SEO-friendly content, and lead-focused marketing sections.',
+    problem: 'Real estate teams needed a professional website structure focused on lead capture and referral growth.',
+    result: 'Built a responsive Next.js and Supabase platform tailored for real estate marketing and conversion-focused campaigns.',
+    role: 'Full Stack Developer',
   },
   {
     name: 'iProply',
@@ -336,6 +349,7 @@ const featuredProjects = [
     description: 'Referral marketing platform with dynamic form flows and automated lead capture.',
     problem: 'No clean, branded entry point for capturing and managing referrals.',
     result: 'Lightweight WordPress funnel that improved referral submission rates significantly.',
+    restricted: 'us-ca',
   },
   {
     name: 'Quiz By Rauf',
@@ -377,21 +391,30 @@ const allProjects = [
   { name: 'Perfex CRM Setup',   category: 'CRM',         image: 'assets/images/projects/private.jpeg',              fallback: 'assets/images/projects/private.jpeg',              link: 'https://github.com/arham-anees/perfex-crm',         tech: ['Perfex CRM', 'PHP', 'MySQL'],       description: 'Custom Perfex CRM modules, workflow automation, and white-label setup.' },
 ];
 
+let hideUsCaRestrictedProjects = true;
+
+function visibleProjects(projects) {
+  return projects.filter(project => !(hideUsCaRestrictedProjects && project.restricted === 'us-ca'));
+}
+
 /* ===== PROJECT CARD HTML ===== */
 function projCardHtml(p) {
   const isRepo = p.link.includes('github.com');
+  const restrictedAttr = p.restricted ? ` data-restricted="${p.restricted}"` : '';
+  const roleHtml = p.role ? `<div class="proj-role">Role: ${p.role}</div>` : '';
   return `
-  <article class="proj-card" role="article">
+  <article class="proj-card" role="article"${restrictedAttr}>
     <div class="proj-card-img">
       <img src="${p.image}" data-fallback="${p.fallback}" alt="${p.name} — ${p.category} project by Abdur Rauf" loading="lazy" width="280" height="160">
       <div class="proj-card-overlay" aria-hidden="true">
-        <a class="proj-overlay-btn" href="${p.link}" target="_blank" rel="noopener noreferrer">${isRepo ? 'View Repo' : 'Live Site'}</a>
+        <a class="proj-overlay-btn" href="${p.link}" target="_blank" rel="noopener noreferrer">${isRepo ? 'View Repo' : 'Live Demo'}</a>
       </div>
     </div>
     <div class="proj-card-body">
       <div class="proj-cat">${p.category}</div>
       <h4>${p.name}</h4>
       ${p.description ? `<p>${p.description}</p>` : '<p>&nbsp;</p>'}
+      ${roleHtml}
       <div class="proj-tech-tags">${p.tech.map(t => `<span class="proj-tech">${t}</span>`).join('')}</div>
     </div>
   </article>`;
@@ -410,7 +433,15 @@ const featured = {
 
 function buildFeatured() {
   if (!featured.track || !featured.dotsWrap) return;
-  featuredProjects.forEach((p, i) => {
+  if (featured.timer) clearInterval(featured.timer);
+  featured.track.innerHTML = '';
+  featured.dotsWrap.innerHTML = '';
+  featured.slides = [];
+
+  const projects = visibleProjects(featuredProjects);
+  if (!projects.length) return;
+
+  projects.forEach((p, i) => {
     const isRepo = p.link.includes('github.com');
     const slide = document.createElement('div');
     slide.className = 'feat-slide';
@@ -450,6 +481,7 @@ function buildFeatured() {
 }
 
 function goToFeatured(i) {
+  if (!featured.slides.length) return;
   featured.idx = (i + featured.slides.length) % featured.slides.length;
   if (featured.track) featured.track.style.transform = `translateX(-${featured.idx * 100}%)`;
   featured.slides.forEach((s, idx) => s.classList.toggle('is-active', idx === featured.idx));
@@ -490,10 +522,11 @@ function buildMarqueeRows() {
   const row3 = qs('#projRow3');
   if (!row1 || !row2 || !row3) return;
 
-  const third = Math.ceil(allProjects.length / 3);
-  const slice1 = allProjects.slice(0, third);
-  const slice2 = allProjects.slice(third, third * 2);
-  const slice3 = allProjects.slice(third * 2);
+  const projects = visibleProjects(allProjects);
+  const third = Math.ceil(projects.length / 3);
+  const slice1 = projects.slice(0, third);
+  const slice2 = projects.slice(third, third * 2);
+  const slice3 = projects.slice(third * 2);
 
   // Each row is duplicated for infinite scroll
   const makeHtml = (arr) => arr.map(p => projCardHtml(p)).join('');
@@ -507,7 +540,7 @@ buildMarqueeRows();
 function buildProjectFilters() {
   const filterWrap = qs('#projectFilters');
   if (!filterWrap) return;
-  const categories = ['All', 'Laravel', 'WordPress', 'Angular', 'JavaScript', 'CRM'];
+  const categories = ['All', 'Laravel', 'WordPress', 'Angular', 'JavaScript', 'CRM', 'Real Estate'];
   filterWrap.innerHTML = categories.map(c =>
     `<button class="proj-filter${c === 'All' ? ' active' : ''}" data-filter="${c.toLowerCase()}" aria-pressed="${c === 'All'}">${c}</button>`
   ).join('');
@@ -526,7 +559,7 @@ function buildProjectFilters() {
       buildMarqueeRows();
     } else {
       // Show all rows but build them from filtered data
-      const filtered = allProjects.filter(p => p.category.toLowerCase().includes(v));
+      const filtered = visibleProjects(allProjects).filter(p => p.category.toLowerCase().includes(v));
       if (filtered.length === 0) return;
       const row1 = qs('#projRow1');
       const row2 = qs('#projRow2');
@@ -539,6 +572,24 @@ function buildProjectFilters() {
   });
 }
 buildProjectFilters();
+
+/* ===== COUNTRY-BASED PROJECT VISIBILITY ===== */
+async function applyProjectCountryVisibility() {
+  try {
+    const response = await fetch('https://ipapi.co/json/');
+    if (!response.ok) throw new Error('Country lookup failed');
+
+    const data = await response.json();
+    const countryCode = String(data.country_code || '').toUpperCase();
+    hideUsCaRestrictedProjects = countryCode === 'US' || countryCode === 'CA' || !countryCode;
+  } catch {
+    hideUsCaRestrictedProjects = true;
+  } finally {
+    buildFeatured();
+    buildMarqueeRows();
+  }
+}
+applyProjectCountryVisibility();
 
 /* ===== REVIEWS ===== */
 function buildReviews() {

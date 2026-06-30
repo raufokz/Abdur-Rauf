@@ -905,6 +905,7 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
 .proj-card-body { padding:1.25rem; }
 .proj-card-body h4 { font-size:0.98rem;font-weight:800;margin-bottom:0.35rem; }
 .proj-card-body p { color:var(--muted);font-size:0.78rem;line-height:1.55;margin-bottom:0.8rem; }
+.proj-role { color:var(--text-2);font-size:0.72rem;font-weight:700;margin:-0.25rem 0 0.8rem; }
 .proj-tech-tags { display:flex;flex-wrap:wrap;gap:0.32rem; }
 .proj-tech { padding:0.2em 0.62em;background:var(--glass-2);border:1px solid var(--border);border-radius:var(--r-pill);font-size:0.65rem;color:var(--muted); }
 .proj-thumb { height:140px;display:flex;align-items:center;justify-content:center;background:var(--card-2);overflow:hidden; }
