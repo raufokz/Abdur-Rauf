@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Screenshot pending">
+  <rect width="640" height="360" fill="#eef2f8"/>
+  <g stroke="#c4cfe0" stroke-width="2" fill="none">
+    <rect x="60" y="70" width="520" height="220" rx="10"/>
+    <path d="M60 116h520"/>
+  </g>
+  <g fill="#c4cfe0">
+    <circle cx="86" cy="93" r="6"/><circle cx="108" cy="93" r="6"/><circle cx="130" cy="93" r="6"/>
+  </g>
+  <g fill="#dbe3ee">
+    <rect x="88" y="146" width="180" height="12" rx="6"/>
+    <rect x="88" y="176" width="240" height="12" rx="6"/>
+    <rect x="88" y="206" width="140" height="12" rx="6"/>
+    <rect x="372" y="146" width="180" height="102" rx="8"/>
+  </g>
+  <text x="320" y="326" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#8695ad">Screenshot coming soon</text>
+</svg>

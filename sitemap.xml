@@ -1,33 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url>
-    <loc>https://raufokz.netlify.app/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+
   <url>
     <loc>https://raufokz.github.io/Abdur-Rauf/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://raufokz.github.io/Abdur-Rauf/assets/images/my-images/profile.webp</image:loc>
-      <image:title>Abdur Rauf — Full Stack Developer (Laravel, React, WordPress)</image:title>
+      <image:title>Abdur Rauf — Full Stack Developer and Technical Operations Team Lead</image:title>
       <image:caption>Abdur Rauf, Full Stack Developer based in Rawalpindi, Pakistan</image:caption>
     </image:image>
   </url>
+
   <url>
-    <loc>https://raufokz.github.io/Abdur-Rauf/assets/doc/pdf/AbdurRauf.pdf</loc>
-    <lastmod>2026-06-19</lastmod>
+    <loc>https://raufokz.github.io/Abdur-Rauf/cv.html</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://raufokz.github.io/Abdur-Rauf/services/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://raufokz.github.io/Abdur-Rauf/services/laravel-php-development.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://raufokz.github.io/Abdur-Rauf/services/wordpress-woocommerce-development.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://raufokz.github.io/Abdur-Rauf/services/real-estate-web-development.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://raufokz.github.io/Abdur-Rauf/services/real-estate-virtual-assistant.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://raufokz.github.io/Abdur-Rauf/services/gohighlevel-crm-automation.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://raufokz.github.io/Abdur-Rauf/services/technical-seo-performance.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://raufokz.github.io/Abdur-Rauf/services/react-angular-development.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://raufokz.github.io/Abdur-Rauf/services/website-maintenance-support.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://raufokz.github.io/Abdur-Rauf/hire-remote-developer.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://raufokz.github.io/Abdur-Rauf/case-studies/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://raufokz.github.io/Abdur-Rauf/case-studies/domestic-real-estate.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://raufokz.github.io/Abdur-Rauf/case-studies/omnireferral.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://raufokz.github.io/Abdur-Rauf/case-studies/iproply.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://raufokz.github.io/Abdur-Rauf/sitemap.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.3</priority>
   </url>
+
 </urlset>
