@@ -143,6 +143,10 @@
     section { margin-bottom: 14px; }
     h2 { margin-bottom: 8px; }
   }
+
+  /* Geo-restricted: hidden until JS confirms non-US/CA */
+  .re-hidden { display: none; }
+  body:not(.re-usca) .re-hidden { display: revert; }
 </style>
 </head>
 <body>
@@ -176,9 +180,9 @@
       Full Stack Developer and Technical Operations Team Lead with a self-taught route into the
       industry — from office support to leading technical delivery for a team. Builds production web
       applications in Laravel, PHP, React and Angular, and WordPress and WooCommerce sites, alongside
-      real estate web systems and CRM automation. Unusually for a developer, has also worked as an ISA
+      <span class="re-hidden">real estate web systems and CRM automation. Unusually for a developer, has also worked as an ISA
       on United States real estate campaigns, so designs lead capture and CRM workflows from direct
-      experience of working the leads they produce. Works remotely with international clients.
+      experience of working the leads they produce.</span> Works remotely with international clients.
     </p>
   </section>
 
@@ -192,7 +196,7 @@
       <div><dt>Operations</dt><dd>IT support, hosting, DNS, SSL, deployment, technical workflow management, hiring &amp; interviews, process improvement</dd></div>
       <div><dt>CRM &amp; business</dt><dd>GoHighLevel, Perfex CRM, VoIP, SMS systems, lead management, automation</dd></div>
       <div><dt>SEO</dt><dd>Technical SEO, on-page SEO, schema markup, Core Web Vitals, Google Analytics, Search Console, SEMrush, Ahrefs</dd></div>
-      <div><dt>Real estate</dt><dd>MLS &amp; property listings, property descriptions, buyer/seller/investor workflows, lead qualification, CRM management</dd></div>
+      <div class="re-hidden"><dt>Real estate</dt><dd>MLS &amp; property listings, property descriptions, buyer/seller/investor workflows, lead qualification, CRM management</dd></div>
       <div><dt>Tools</dt><dd>Git, GitHub, VS Code, Postman, Figma, Notion, Netlify, Vercel, cPanel</dd></div>
       <div><dt>AI-assisted</dt><dd>GitHub Copilot, Cursor, Codex, DeepSeek, Tabnine, Blackbox</dd></div>
     </dl>
@@ -232,7 +236,7 @@
       </ul>
     </article>
 
-    <article class="role">
+    <article class="role re-hidden">
       <div class="role-top">
         <span class="role-title">ISA / Real Estate Call Agent</span>
         <span class="role-dates"><span class="fill">2024</span></span>
@@ -280,7 +284,7 @@
       <p class="role-org">International clients — remote</p>
       <ul>
         <li>Deliver web development and UI/UX work for clients outside Pakistan</li>
-        <li>Build WordPress sites, real estate websites, CRM automation and custom business solutions</li>
+        <li>Build WordPress sites, <span class="re-hidden">real estate websites,</span> CRM automation and custom business solutions</li>
         <li>Handle client communication, scoping, delivery and post-launch support end to end</li>
       </ul>
     </article>
@@ -288,12 +292,12 @@
 
   <section>
     <h2>Selected projects</h2>
-    <p class="proj"><b>Domestic Real Estate</b> — US real estate marketplace with property listings, search and filtering, and buyer, seller and investor workflows. <span>Full stack developer. domesticrealestate.us</span></p>
-    <p class="proj"><b>OmniReferral</b> — real estate buyer and seller lead engine with a four-step intake flow, ZIP-based routing and agent dashboard delivery. <span>Laravel, PHP, MySQL, Bootstrap. omnireferral.us</span></p>
-    <p class="proj"><b>iProply</b> — US property search platform with location, type, status and price filtering, listings and an agent directory. <span>Core PHP, MySQL, JavaScript. iproply.com</span></p>
-    <p class="proj"><b>TenantFlow</b> — property management dashboard covering tenants, rent payments, maintenance complaints and property records. <span>React. tenantflow.app</span></p>
+    <p class="proj re-hidden"><b>Domestic Real Estate</b> — US real estate marketplace with property listings, search and filtering, and buyer, seller and investor workflows. <span>Full stack developer. domesticrealestate.us</span></p>
+    <p class="proj re-hidden"><b>OmniReferral</b> — real estate buyer and seller lead engine with a four-step intake flow, ZIP-based routing and agent dashboard delivery. <span>Laravel, PHP, MySQL, Bootstrap. omnireferral.us</span></p>
+    <p class="proj re-hidden"><b>iProply</b> — US property search platform with location, type, status and price filtering, listings and an agent directory. <span>Core PHP, MySQL, JavaScript. iproply.com</span></p>
+    <p class="proj re-hidden"><b>TenantFlow</b> — property management dashboard covering tenants, rent payments, maintenance complaints and property records. <span>React. tenantflow.app</span></p>
     <p class="proj"><b>MRLink</b> — link-in-bio SaaS platform for creators, currently in public beta. <span>Next.js, Laravel, Supabase. mrlink.app</span></p>
-    <p class="proj"><b>Open Referral / Axis Referral</b> — WordPress real estate referral platforms with lead matching, registration and referral tracking. <span>WordPress, PHP, MySQL.</span></p>
+    <p class="proj re-hidden"><b>Open Referral / Axis Referral</b> — WordPress real estate referral platforms with lead matching, registration and referral tracking. <span>WordPress, PHP, MySQL.</span></p>
     <p class="proj"><b>Company Hub</b> — internal Angular team platform for HR records and task tracking. <span>Angular, TypeScript, REST API.</span></p>
     <p class="proj"><b>Attendance System</b> — employee attendance management with analytics dashboard. <span>Laravel, MySQL, Chart.js. github.com/raufokz</span></p>
   </section>
@@ -321,6 +325,18 @@
       console.warn('CV still contains an unfilled placeholder — search for "2024".');
     }
   });
+</script>
+<script>
+(function(){
+  fetch('https://ipapi.co/json/')
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if(d.country_code === 'US' || d.country_code === 'CA'){
+        document.body.classList.add('re-usca');
+      }
+    })
+    .catch(function(){});
+})();
 </script>
 
 </body>
